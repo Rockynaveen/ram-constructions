@@ -6,14 +6,14 @@ import { SectionHeading } from '../ui/SectionHeading';
 import { ArrowUpRight, MapPin } from 'lucide-react';
 
 export const FeaturedProjects: React.FC = () => {
-  const [activeCategory, setActiveCategory] = useState<'All' | 'Residential' | 'Commercial'>('All');
+  const [activeFilter, setActiveFilter] = useState<'All' | 'Ongoing' | 'Completed'>('All');
 
   const featured = projectsData.filter((p) => {
-    if (activeCategory === 'All') return p.featured;
-    return p.featured && p.category === activeCategory;
+    if (activeFilter === 'All') return p.featured;
+    return p.featured && p.status === activeFilter;
   });
 
-  const categories = ['All', 'Residential', 'Commercial'] as const;
+  const filterTabs = ['All', 'Ongoing', 'Completed'] as const;
 
   return (
     <section className="py-16 sm:py-24 bg-[#F8FAFC]/50 border-t border-slate-200 relative overflow-hidden">
@@ -29,19 +29,19 @@ export const FeaturedProjects: React.FC = () => {
           />
 
           <div className="flex flex-wrap items-center gap-3 shrink-0">
-            {/* Category Filter Pills */}
+            {/* Filter Tabs Pills (All / Ongoing / Completed) */}
             <div className="flex items-center gap-1.5 bg-white p-1.5 rounded-xl border border-slate-200 shadow-sm">
-              {categories.map((cat) => (
+              {filterTabs.map((tab) => (
                 <button
-                  key={cat}
-                  onClick={() => setActiveCategory(cat)}
+                  key={tab}
+                  onClick={() => setActiveFilter(tab)}
                   className={`px-4 py-2 text-xs font-mono font-bold uppercase tracking-wider rounded-lg transition-all duration-300 cursor-pointer ${
-                    activeCategory === cat
+                    activeFilter === tab
                       ? 'bg-[#0284C7] text-white shadow-md shadow-sky-500/20'
                       : 'text-slate-600 hover:text-[#0B2545] hover:bg-slate-100'
                   }`}
                 >
-                  {cat}
+                  {tab}
                 </button>
               ))}
             </div>
@@ -59,7 +59,7 @@ export const FeaturedProjects: React.FC = () => {
         {/* Portfolio Showcase Grid */}
         <AnimatePresence mode="wait">
           <motion.div 
-            key={activeCategory}
+            key={activeFilter}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
@@ -84,11 +84,18 @@ export const FeaturedProjects: React.FC = () => {
 
                   {/* Top Badges */}
                   <div className="absolute top-5 left-5 right-5 flex items-center justify-between z-10">
-                    <span className="text-[11px] font-mono font-bold tracking-wider uppercase bg-[#0284C7] text-white px-3 py-1 rounded-md shadow-md">
-                      {featured[0].category}
+                    <span className={`text-[11px] font-mono font-bold tracking-wider uppercase px-3 py-1 rounded-md shadow-md flex items-center gap-1.5 ${
+                      featured[0].status === 'Ongoing'
+                        ? 'bg-amber-500 text-white'
+                        : 'bg-[#0284C7] text-white'
+                    }`}>
+                      {featured[0].status === 'Ongoing' && (
+                        <span className="w-1.5 h-1.5 rounded-full bg-white animate-pulse" />
+                      )}
+                      {featured[0].status || featured[0].category}
                     </span>
                     <span className="text-xs font-mono font-bold text-sky-200 bg-[#050E1C]/80 backdrop-blur-md px-3 py-1 rounded-md border border-white/20">
-                      {featured[0].year} Handover
+                      {featured[0].status === 'Ongoing' ? `Delivery ${featured[0].year}` : `${featured[0].year} Handover`}
                     </span>
                   </div>
 
@@ -142,8 +149,15 @@ export const FeaturedProjects: React.FC = () => {
                     <div className="absolute inset-0 bg-gradient-to-t from-[#050E1C]/95 via-[#0B2545]/45 to-transparent" />
 
                     <div className="absolute top-4 left-4 z-10">
-                      <span className="text-[10px] font-mono font-bold tracking-wider uppercase bg-[#050E1C]/80 text-[#38BDF8] px-2.5 py-1 rounded border border-[#38BDF8]/30">
-                        {item.category}
+                      <span className={`text-[10px] font-mono font-bold tracking-wider uppercase px-2.5 py-1 rounded border flex items-center gap-1.5 ${
+                        item.status === 'Ongoing'
+                          ? 'bg-amber-500/90 text-white border-amber-400/40'
+                          : 'bg-[#050E1C]/80 text-[#38BDF8] border-[#38BDF8]/30'
+                      }`}>
+                        {item.status === 'Ongoing' && (
+                          <span className="w-1.5 h-1.5 rounded-full bg-white animate-pulse" />
+                        )}
+                        {item.status || item.category}
                       </span>
                     </div>
 
@@ -187,11 +201,18 @@ export const FeaturedProjects: React.FC = () => {
 
                   <div className="absolute bottom-5 left-5 right-5 z-10 text-white">
                     <div className="flex items-center justify-between mb-2">
-                      <span className="text-[10px] font-mono font-bold tracking-wider uppercase bg-[#0284C7] text-white px-2.5 py-0.5 rounded">
-                        {item.category}
+                      <span className={`text-[10px] font-mono font-bold tracking-wider uppercase px-2.5 py-0.5 rounded flex items-center gap-1.5 ${
+                        item.status === 'Ongoing'
+                          ? 'bg-amber-500 text-white'
+                          : 'bg-[#0284C7] text-white'
+                      }`}>
+                        {item.status === 'Ongoing' && (
+                          <span className="w-1.5 h-1.5 rounded-full bg-white animate-pulse" />
+                        )}
+                        {item.status || item.category}
                       </span>
                       <span className="text-xs font-mono text-sky-200">
-                        {item.year} Handover
+                        {item.status === 'Ongoing' ? `Delivery ${item.year}` : `${item.year} Handover`}
                       </span>
                     </div>
 

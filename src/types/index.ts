@@ -12,6 +12,7 @@ export interface Project {
   title: string;
   tagline: string;
   category: 'Residential' | 'Commercial' | 'Architecture' | 'Interior' | 'Renovation';
+  status?: 'Ongoing' | 'Completed';
   location: string;
   year: string;
   area: string; // e.g. "8,400 sq.ft"
