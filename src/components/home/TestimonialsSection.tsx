@@ -55,9 +55,9 @@ export const TestimonialsSection: React.FC = () => {
           </div>
         </div>
 
-        {/* Featured Editorial Spotlight Box (Light Theme) */}
-        <div className="bg-[#F8FAFC] border border-slate-200 rounded-2xl p-5 sm:p-6 lg:p-8 shadow-md relative overflow-hidden">
-          <Quote className="w-14 h-14 sm:w-16 sm:h-16 text-[#0284C7]/15 absolute top-3 right-3 sm:top-5 sm:right-5 pointer-events-none" />
+        {/* Featured Editorial Spotlight Box (Rich Blue Card) */}
+        <div className="bg-gradient-to-br from-[#0B2545] via-[#0D2E54] to-[#081C33] text-white border border-[#0284C7]/40 rounded-2xl p-5 sm:p-6 lg:p-8 shadow-xl shadow-sky-950/15 relative overflow-hidden">
+          <Quote className="w-14 h-14 sm:w-16 sm:h-16 text-white/10 absolute top-3 right-3 sm:top-5 sm:right-5 pointer-events-none" />
 
           <AnimatePresence mode="wait">
             <motion.div
@@ -74,46 +74,46 @@ export const TestimonialsSection: React.FC = () => {
                   <img
                     src={current.image}
                     alt={current.clientName}
-                    className="w-16 h-16 sm:w-18 sm:h-18 rounded-xl object-cover border-2 border-[#0284C7] shadow-md shadow-sky-500/10"
+                    className="w-16 h-16 sm:w-18 sm:h-18 rounded-xl object-cover border-2 border-[#38BDF8] shadow-md shadow-sky-500/20"
                   />
                   <span className="absolute -bottom-1 -right-1 bg-[#0284C7] text-white p-0.5 rounded shadow-xs">
                     <CheckCircle2 className="w-3 h-3" />
                   </span>
                 </div>
 
-                <h3 className="text-base sm:text-lg text-[#0B2545] font-bold">
+                <h3 className="text-base sm:text-lg text-white font-bold">
                   {current.clientName}
                 </h3>
-                <p className="text-xs text-[#0284C7] font-semibold mt-0.5">
+                <p className="text-xs text-[#38BDF8] font-semibold mt-0.5">
                   {current.designation}
                 </p>
 
-                <div className="mt-2.5 pt-2 border-t border-slate-200 w-full flex flex-col items-center lg:items-start gap-0.5 text-xs font-mono text-slate-600">
-                  <span className="flex items-center gap-1 text-[#0284C7] font-bold">
+                <div className="mt-2.5 pt-2 border-t border-white/15 w-full flex flex-col items-center lg:items-start gap-0.5 text-xs font-mono text-slate-300">
+                  <span className="flex items-center gap-1 text-[#38BDF8] font-bold">
                     <MapPin className="w-3 h-3" />
                     {current.location}
                   </span>
                   <span>{current.projectTitle} • {current.area}</span>
-                  <span className="text-slate-500 font-semibold">Handover {current.year}</span>
+                  <span className="text-slate-400 font-semibold">Handover {current.year}</span>
                 </div>
               </div>
 
               {/* Right Column: Rating & Big Quote */}
               <div className="lg:col-span-8 flex flex-col justify-between space-y-3">
-                <div className="flex items-center gap-1 text-amber-500">
+                <div className="flex items-center gap-1 text-amber-400">
                   {[...Array(current.rating)].map((_, i) => (
                     <Star key={i} className="w-3.5 h-3.5 fill-current" />
                   ))}
-                  <span className="text-xs font-mono text-slate-600 ml-2 font-bold">5.0 / 5.0 Verified Review</span>
+                  <span className="text-xs font-mono text-sky-200 ml-2 font-bold">5.0 / 5.0 Verified Review</span>
                 </div>
 
-                <blockquote className="text-sm sm:text-base lg:text-lg text-[#0B2545] leading-relaxed font-normal tracking-tight">
+                <blockquote className="text-sm sm:text-base lg:text-lg text-white leading-relaxed font-normal tracking-tight drop-shadow-xs">
                   "{current.quote}"
                 </blockquote>
 
-                <div className="pt-2 border-t border-slate-200 flex items-center justify-between text-xs font-mono text-slate-600">
-                  <span className="text-[#0284C7] font-bold">Turnkey Structural Execution</span>
-                  <span className="text-slate-700 font-bold">Verified Homeowner</span>
+                <div className="pt-2 border-t border-white/15 flex items-center justify-between text-xs font-mono text-sky-200">
+                  <span className="text-[#38BDF8] font-bold">Turnkey Structural Execution</span>
+                  <span className="text-white font-bold">Verified Homeowner</span>
                 </div>
               </div>
             </motion.div>
