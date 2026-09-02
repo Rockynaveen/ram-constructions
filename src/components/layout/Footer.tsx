@@ -162,14 +162,19 @@ export const Footer: React.FC = () => {
 
           <p className="text-slate-300">
             Designed by{' '}
-            <a
-              href="https://www.sunseaz.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-[#38BDF8] hover:text-white transition-colors font-semibold underline underline-offset-4 decoration-[#38BDF8]/60 hover:decoration-white"
+            <span
+              onClick={() => window.open('https://www.sunseaz.com/', '_blank', 'noopener,noreferrer')}
+              role="button"
+              tabIndex={0}
+              onKeyDown={(e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                  window.open('https://www.sunseaz.com/', '_blank', 'noopener,noreferrer');
+                }
+              }}
+              className="text-[#38BDF8] hover:text-white transition-colors font-semibold underline underline-offset-4 decoration-[#38BDF8]/60 hover:decoration-white cursor-pointer select-none"
             >
               sunseaz
-            </a>
+            </span>
           </p>
 
           <div className="flex items-center gap-6">
