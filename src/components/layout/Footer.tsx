@@ -156,13 +156,26 @@ export const Footer: React.FC = () => {
           </div>
         </div>
 
-        {/* Bottom Legal Strip */}
-        <div className="mt-10 pt-6 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-light text-slate-400 font-mono">
+        {/* Bottom Legal Strip with Center Designed by Sunseaz */}
+        <div className="mt-10 pt-6 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-4 text-xs font-light text-slate-400 font-mono text-center md:text-left">
           <p>© {new Date().getFullYear()} RAM CONSTRUCTIONS Pvt. Ltd. All rights reserved.</p>
+
+          <p className="text-slate-300">
+            Designed by{' '}
+            <a
+              href="https://www.sunseaz.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[#38BDF8] hover:text-white transition-colors font-semibold underline underline-offset-4 decoration-[#38BDF8]/60 hover:decoration-white"
+            >
+              sunseaz
+            </a>
+          </p>
+
           <div className="flex items-center gap-6">
             <Link to="/privacy" className="hover:text-slate-200 transition-colors">Privacy Policy</Link>
             <Link to="/terms" className="hover:text-slate-200 transition-colors">Terms of Engagement</Link>
-            <span className="text-[#38BDF8]">Architecture • Engineering • Craft</span>
+            <span className="text-[#38BDF8]">Architecture • Engineering</span>
           </div>
         </div>
       </div>
