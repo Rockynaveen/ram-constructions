@@ -47,6 +47,9 @@ export const BlogSection: React.FC = () => {
                     src={article.coverImage}
                     alt={article.title}
                     className="w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-105"
+                    onError={(e) => {
+                      (e.target as HTMLImageElement).src = 'https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1200&q=80';
+                    }}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
                   

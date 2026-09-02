@@ -119,7 +119,7 @@ export const articlesData: Article[] = [
       role: 'Chief Structural Engineer',
       avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=300&q=80'
     },
-    coverImage: 'https://images.unsplash.com/photo-1541888946425-d0fbb18f15f6?auto=format&fit=crop&w=1200&q=80',
+    coverImage: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1200&q=80',
     excerpt: 'A realistic milestone roadmap outlining the journey from soil testing and sanction approvals to casting, MEP installation, and final handover.',
     tags: ['Project Management', 'Timelines', 'Milestones', 'Quality Assurance'],
     sections: [
