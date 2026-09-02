@@ -17,26 +17,13 @@ export const TestimonialsSection: React.FC = () => {
   };
 
   return (
-    <section className="py-8 sm:py-10 lg:py-12 bg-[#050E1C] text-white relative overflow-hidden border-t border-slate-800">
-      {/* Background Architectural Ambient Glow & Grid */}
-      <div className="absolute inset-0 z-0 pointer-events-none">
-        <div className="absolute top-0 left-1/4 w-[450px] h-[450px] bg-[#0284C7]/12 rounded-full blur-[140px]" />
-        <div className="absolute bottom-0 right-1/4 w-[400px] h-[400px] bg-sky-500/10 rounded-full blur-[140px]" />
-        <div 
-          className="absolute inset-0 opacity-10" 
-          style={{
-            backgroundImage: `linear-gradient(to right, rgba(255,255,255,0.06) 1px, transparent 1px), linear-gradient(to bottom, rgba(255,255,255,0.06) 1px, transparent 1px)`,
-            backgroundSize: '40px 40px'
-          }}
-        />
-      </div>
-
-      <div className="relative z-10 max-w-[1440px] mx-auto px-6 sm:px-10 lg:px-14">
+    <section className="py-10 sm:py-12 bg-white text-[#0B2545] relative overflow-hidden border-t border-slate-200">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        {/* Section Header (Compacted) */}
-        <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-4 mb-5 border-b border-white/10 pb-4">
+        {/* Section Header */}
+        <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-4 mb-6 border-b border-slate-200 pb-4">
           <SectionHeading
-            theme="dark"
+            theme="light"
             eyebrow="Client Endorsements"
             title="Stories of Trust &"
             titleHighlight="Excellence."
@@ -45,7 +32,7 @@ export const TestimonialsSection: React.FC = () => {
 
           {/* Navigation Arrow Controls & Indicator */}
           <div className="flex items-center gap-2.5 shrink-0">
-            <span className="text-xs font-mono text-sky-300 font-bold bg-[#0B2545] px-2.5 py-0.5 rounded border border-[#38BDF8]/30">
+            <span className="text-xs font-mono text-[#0284C7] font-bold bg-[#F0F9FF] px-2.5 py-1 rounded border border-sky-200">
               0{activeIndex + 1} / 0{testimonialsData.length}
             </span>
 
@@ -53,14 +40,14 @@ export const TestimonialsSection: React.FC = () => {
               <button
                 onClick={handlePrev}
                 aria-label="Previous endorsement"
-                className="w-8 h-8 sm:w-9 sm:h-9 rounded-full border border-white/20 bg-white/5 backdrop-blur-md text-white hover:bg-[#0284C7] hover:border-[#0284C7] transition-all flex items-center justify-center cursor-pointer active:scale-95 shadow-md"
+                className="w-9 h-9 rounded-full border border-slate-200 bg-white text-[#0B2545] hover:bg-[#0284C7] hover:text-white hover:border-[#0284C7] transition-all flex items-center justify-center cursor-pointer active:scale-95 shadow-xs"
               >
                 <ChevronLeft className="w-4 h-4" />
               </button>
               <button
                 onClick={handleNext}
                 aria-label="Next endorsement"
-                className="w-8 h-8 sm:w-9 sm:h-9 rounded-full border border-white/20 bg-white/5 backdrop-blur-md text-white hover:bg-[#0284C7] hover:border-[#0284C7] transition-all flex items-center justify-center cursor-pointer active:scale-95 shadow-md"
+                className="w-9 h-9 rounded-full border border-slate-200 bg-white text-[#0B2545] hover:bg-[#0284C7] hover:text-white hover:border-[#0284C7] transition-all flex items-center justify-center cursor-pointer active:scale-95 shadow-xs"
               >
                 <ChevronRight className="w-4 h-4" />
               </button>
@@ -68,9 +55,9 @@ export const TestimonialsSection: React.FC = () => {
           </div>
         </div>
 
-        {/* Featured Editorial Spotlight Box (Reduced Height & Padding) */}
-        <div className="bg-[#0B2545]/80 backdrop-blur-xl border border-[#0EA5E9]/30 rounded-2xl p-5 sm:p-6 lg:p-7 shadow-2xl relative overflow-hidden">
-          <Quote className="w-14 h-14 sm:w-16 sm:h-16 text-[#38BDF8]/10 absolute top-3 right-3 sm:top-5 sm:right-5 pointer-events-none" />
+        {/* Featured Editorial Spotlight Box (Light Theme) */}
+        <div className="bg-[#F8FAFC] border border-slate-200 rounded-2xl p-5 sm:p-6 lg:p-8 shadow-md relative overflow-hidden">
+          <Quote className="w-14 h-14 sm:w-16 sm:h-16 text-[#0284C7]/15 absolute top-3 right-3 sm:top-5 sm:right-5 pointer-events-none" />
 
           <AnimatePresence mode="wait">
             <motion.div
@@ -79,7 +66,7 @@ export const TestimonialsSection: React.FC = () => {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -12 }}
               transition={{ duration: 0.25 }}
-              className="grid grid-cols-1 lg:grid-cols-12 gap-5 lg:gap-6 items-center"
+              className="grid grid-cols-1 lg:grid-cols-12 gap-5 lg:gap-8 items-center"
             >
               {/* Left Column: Client Avatar & Project Tag */}
               <div className="lg:col-span-4 flex flex-col items-center lg:items-start text-center lg:text-left">
@@ -87,46 +74,46 @@ export const TestimonialsSection: React.FC = () => {
                   <img
                     src={current.image}
                     alt={current.clientName}
-                    className="w-14 h-14 sm:w-16 sm:h-16 rounded-xl object-cover border-2 border-[#38BDF8] shadow-md shadow-sky-500/20"
+                    className="w-16 h-16 sm:w-18 sm:h-18 rounded-xl object-cover border-2 border-[#0284C7] shadow-md shadow-sky-500/10"
                   />
-                  <span className="absolute -bottom-1 -right-1 bg-[#0284C7] text-white p-0.5 rounded shadow-sm">
+                  <span className="absolute -bottom-1 -right-1 bg-[#0284C7] text-white p-0.5 rounded shadow-xs">
                     <CheckCircle2 className="w-3 h-3" />
                   </span>
                 </div>
 
-                <h3 className="text-base sm:text-lg text-white font-bold">
+                <h3 className="text-base sm:text-lg text-[#0B2545] font-bold">
                   {current.clientName}
                 </h3>
-                <p className="text-xs text-sky-300 font-semibold mt-0.5">
+                <p className="text-xs text-[#0284C7] font-semibold mt-0.5">
                   {current.designation}
                 </p>
 
-                <div className="mt-2.5 pt-2 border-t border-white/10 w-full flex flex-col items-center lg:items-start gap-0.5 text-xs font-mono text-slate-300">
-                  <span className="flex items-center gap-1 text-[#38BDF8] font-bold">
+                <div className="mt-2.5 pt-2 border-t border-slate-200 w-full flex flex-col items-center lg:items-start gap-0.5 text-xs font-mono text-slate-600">
+                  <span className="flex items-center gap-1 text-[#0284C7] font-bold">
                     <MapPin className="w-3 h-3" />
                     {current.location}
                   </span>
                   <span>{current.projectTitle} • {current.area}</span>
-                  <span className="text-slate-400">Handover {current.year}</span>
+                  <span className="text-slate-500 font-semibold">Handover {current.year}</span>
                 </div>
               </div>
 
               {/* Right Column: Rating & Big Quote */}
               <div className="lg:col-span-8 flex flex-col justify-between space-y-3">
-                <div className="flex items-center gap-1 text-amber-400">
+                <div className="flex items-center gap-1 text-amber-500">
                   {[...Array(current.rating)].map((_, i) => (
                     <Star key={i} className="w-3.5 h-3.5 fill-current" />
                   ))}
-                  <span className="text-xs font-mono text-sky-200 ml-2 font-bold">5.0 / 5.0 Verified Review</span>
+                  <span className="text-xs font-mono text-slate-600 ml-2 font-bold">5.0 / 5.0 Verified Review</span>
                 </div>
 
-                <blockquote className="text-sm sm:text-base lg:text-lg text-white leading-relaxed font-normal tracking-tight drop-shadow-md">
+                <blockquote className="text-sm sm:text-base lg:text-lg text-[#0B2545] leading-relaxed font-normal tracking-tight">
                   "{current.quote}"
                 </blockquote>
 
-                <div className="pt-2 border-t border-white/15 flex items-center justify-between text-xs font-mono text-sky-300">
-                  <span>Turnkey Structural Execution</span>
-                  <span className="text-white font-bold">Verified Homeowner</span>
+                <div className="pt-2 border-t border-slate-200 flex items-center justify-between text-xs font-mono text-slate-600">
+                  <span className="text-[#0284C7] font-bold">Turnkey Structural Execution</span>
+                  <span className="text-slate-700 font-bold">Verified Homeowner</span>
                 </div>
               </div>
             </motion.div>
