@@ -13,10 +13,10 @@ export const Logo: React.FC<LogoProps> = ({
   theme = 'light'
 }) => {
   const sizeMap = {
-    sm: 'h-12 sm:h-14 w-auto min-w-[130px]',
-    md: 'h-16 sm:h-20 lg:h-24 w-auto min-w-[180px] sm:min-w-[220px]',
-    lg: 'h-20 sm:h-24 lg:h-28 w-auto min-w-[220px] sm:min-w-[260px]',
-    xl: 'h-28 sm:h-36 w-auto min-w-[280px]'
+    sm: 'h-8 sm:h-9 w-auto min-w-[90px]',
+    md: 'h-11 sm:h-13 lg:h-14 w-auto min-w-[130px] sm:min-w-[160px]',
+    lg: 'h-16 sm:h-18 lg:h-20 w-auto min-w-[180px] sm:min-w-[220px]',
+    xl: 'h-22 sm:h-28 w-auto min-w-[240px]'
   };
 
   const currentSize = sizeMap[size];

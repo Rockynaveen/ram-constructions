@@ -45,8 +45,8 @@ export const Navbar: React.FC = () => {
     <header
       className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${
         isScrolled
-          ? 'bg-white/95 backdrop-blur-md border-b border-slate-200 py-0.5 sm:py-1 shadow-sm'
-          : 'bg-white/90 backdrop-blur-sm py-1 sm:py-1.5'
+          ? 'bg-white/95 backdrop-blur-md border-b border-slate-200 py-0.5 shadow-sm'
+          : 'bg-white/90 backdrop-blur-sm py-1'
       }`}
     >
       <div className="max-w-[1440px] mx-auto pl-0.5 pr-3 sm:px-6 lg:px-8 flex items-center justify-between">
@@ -84,7 +84,7 @@ export const Navbar: React.FC = () => {
         <div className="hidden lg:flex items-center">
           <button
             onClick={() => openConsultationModal()}
-            className="inline-flex items-center gap-2 bg-[#0B2545] hover:bg-[#133E70] text-white text-[12px] font-sans font-bold tracking-[0.14em] uppercase px-6 py-3.5 rounded-sm transition-all duration-200 shadow-md shadow-slate-900/10 cursor-pointer group"
+            className="inline-flex items-center gap-2 bg-[#0B2545] hover:bg-[#133E70] text-white text-[12px] font-sans font-bold tracking-[0.14em] uppercase px-5 py-2.5 rounded-sm transition-all duration-200 shadow-md shadow-slate-900/10 cursor-pointer group"
           >
             <span>START A PROJECT</span>
             <ArrowRight className="w-3.5 h-3.5 transition-transform duration-200 group-hover:translate-x-1" />
