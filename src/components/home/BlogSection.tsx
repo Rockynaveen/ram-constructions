@@ -6,11 +6,11 @@ import { SectionHeading } from '../ui/SectionHeading';
 import { ArrowUpRight, Clock, Calendar } from 'lucide-react';
 
 export const BlogSection: React.FC = () => {
-  const featuredArticles = articlesData.slice(0, 3);
+  const featuredArticles = articlesData.slice(0, 4);
 
   return (
     <section className="py-10 sm:py-14 bg-[#F8FAFC] border-t border-slate-200 relative overflow-hidden">
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header */}
         <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-8">
@@ -29,8 +29,8 @@ export const BlogSection: React.FC = () => {
           </Link>
         </div>
 
-        {/* 3 Blog Cards Grid (Compact Dimensions) */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5">
+        {/* 4 Blog Cards Grid (Compact & Responsive) */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
           {featuredArticles.map((article, index) => (
             <motion.article
               key={article.id}
