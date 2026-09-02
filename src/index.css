@@ -1,0 +1,145 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Roboto", sans-serif;
+  --font-display: "Roboto", sans-serif;
+  --font-sans: "Roboto", sans-serif;
+  --font-mono: "Roboto", sans-serif;
+
+  /* RAM Construction Crisp Light Theme: Deep Navy & Electric Cerulean/Sky Blue */
+  --color-brand-navy-950: #050E1C;
+  --color-brand-navy-900: #0A192F;
+  --color-brand-navy-800: #0B2545;
+  --color-brand-navy-700: #133E70;
+
+  --color-brand-blue-600: #0284C7;
+  --color-brand-blue-500: #0EA5E9;
+  --color-brand-blue-400: #38BDF8;
+  --color-brand-blue-100: #E0F2FE;
+  --color-brand-blue-50: #F0F9FF;
+
+  --color-slate-body: #334155;
+  --color-slate-muted: #64748B;
+}
+
+@layer base {
+  *, ::after, ::before {
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif !important;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: #FFFFFF;
+    font-family: "Roboto", sans-serif !important;
+  }
+
+  body {
+    background-color: #FFFFFF;
+    color: #334155;
+    font-family: "Roboto", sans-serif !important;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: "Roboto", sans-serif !important;
+    letter-spacing: -0.02em;
+    font-weight: 700;
+  }
+
+  p, span, a, button, input, textarea, select, label {
+    font-family: "Roboto", sans-serif !important;
+  }
+
+  /* Custom subtle scrollbar in RAM Blue */
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #F1F5F9;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #CBD5E1;
+    border-radius: 3px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #0284C7;
+  }
+}
+
+/* Custom architectural utilities */
+.font-display-serif,
+.font-editorial,
+.font-tech,
+.font-serif,
+.font-sans,
+.font-mono {
+  font-family: "Roboto", sans-serif !important;
+}
+
+.bg-architectural-grid {
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(2, 132, 199, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(2, 132, 199, 0.05) 1px, transparent 1px);
+}
+
+.bg-light-grid {
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(11, 37, 69, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(11, 37, 69, 0.04) 1px, transparent 1px);
+}
+
+.text-gold-gradient,
+.text-brand-gradient {
+  background: linear-gradient(135deg, #0B2545 0%, #0284C7 60%, #0EA5E9 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-blue-gradient {
+  background: linear-gradient(135deg, #0284C7 0%, #0369A1 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.glass-panel {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(226, 232, 240, 0.9);
+}
+
+.editorial-shadow {
+  box-shadow: 0 20px 40px -15px rgba(11, 37, 69, 0.08), 0 0 1px rgba(11, 37, 69, 0.1);
+}
+
+/* 3D Card Flip Utilities */
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.preserve-3d {
+  transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.rotate-y-180 {
+  transform: rotateY(180deg);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .preserve-3d {
+    transform-style: flat !important;
+  }
+}
+
