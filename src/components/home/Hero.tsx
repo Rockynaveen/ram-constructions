@@ -2,45 +2,13 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { useAppStore } from '../../store/useStore';
-import { ArrowRight, Building2, Users, CheckCircle2, Maximize2 } from 'lucide-react';
-import { AnimatedCounter } from '../ui/AnimatedCounter';
+import { ArrowRight } from 'lucide-react';
 
 export const Hero: React.FC = () => {
   const { openConsultationModal } = useAppStore();
 
-  const stats = [
-    {
-      value: 15,
-      suffix: '+',
-      label: 'YEARS OF EXPERIENCE',
-      sub: 'Engineering Excellence',
-      icon: Building2
-    },
-    {
-      value: 300,
-      suffix: '+',
-      label: 'HAPPY CLIENTS',
-      sub: 'Turnkey Luxury Homes',
-      icon: Users
-    },
-    {
-      value: 310,
-      suffix: '+',
-      label: 'PROJECTS DELIVERED',
-      sub: 'On-Time & On-Budget',
-      icon: CheckCircle2
-    },
-    {
-      value: 7,
-      suffix: 'M+',
-      label: 'SQ. FT. BUILT',
-      sub: 'Spaces Realized',
-      icon: Maximize2
-    }
-  ];
-
   return (
-    <section className="relative min-h-[96vh] flex flex-col justify-between pt-24 sm:pt-28 overflow-hidden bg-white">
+    <section className="relative min-h-[85vh] flex flex-col justify-center pt-28 pb-16 sm:pb-20 overflow-hidden bg-white">
       {/* Background Hero Image from /images/bg-image.png */}
       <div className="absolute inset-0 z-0 overflow-hidden">
         <motion.img
@@ -58,7 +26,7 @@ export const Hero: React.FC = () => {
       </div>
 
       {/* Main Hero Container */}
-      <div className="relative z-10 max-w-[1440px] mx-auto px-6 sm:px-10 lg:px-14 w-full flex-1 flex items-center py-8 lg:py-16">
+      <div className="relative z-10 max-w-[1440px] mx-auto px-6 sm:px-10 lg:px-14 w-full py-8 lg:py-16">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center w-full">
           
           {/* Left Column: Direct Text & Actions */}
@@ -86,7 +54,7 @@ export const Hero: React.FC = () => {
               <div className="w-12 h-[3px] bg-[#0B2545] rounded-full my-5" />
             </div>
 
-            {/* Paragraph (Black Color Font with Semi-Bold) */}
+            {/* Paragraph */}
             <p className="text-base sm:text-lg font-semibold text-black max-w-xl leading-relaxed">
               We partner with you at every step to bring your dream space to life with clarity, precision engineering and turnkey master craftsmanship.
             </p>
@@ -115,50 +83,6 @@ export const Hero: React.FC = () => {
 
         </div>
       </div>
-
-      {/* Integrated Deep Navy Bottom Statistics Bar */}
-      <motion.div
-        initial={{ opacity: 0, y: 30 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, delay: 0.6 }}
-        className="relative z-20 bg-[#0B2545] text-white w-full border-t border-[#133E70] shadow-2xl"
-      >
-        <div className="max-w-[1440px] mx-auto px-6 sm:px-10 lg:px-14 py-6 sm:py-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 lg:gap-8 divide-y md:divide-y-0 md:divide-x divide-white/10">
-            {stats.map((stat, idx) => {
-              const Icon = stat.icon;
-              return (
-                <div
-                  key={stat.label}
-                  className={`flex items-center gap-4 sm:gap-5 ${
-                    idx > 0 ? 'pt-4 md:pt-0 md:pl-8' : ''
-                  }`}
-                >
-                  <div className="w-12 h-12 rounded-xl bg-white/10 border border-white/15 flex items-center justify-center shrink-0 shadow-inner">
-                    <Icon className="w-6 h-6 text-[#38BDF8]" />
-                  </div>
-
-                  <div>
-                    <div className="font-serif text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight text-white leading-none">
-                      <AnimatedCounter
-                        value={stat.value}
-                        suffix={stat.suffix}
-                        decimals={0}
-                      />
-                    </div>
-                    <div className="text-[11px] sm:text-xs font-sans font-bold tracking-[0.14em] uppercase text-slate-200 mt-1.5">
-                      {stat.label}
-                    </div>
-                    <div className="text-[10px] text-sky-200 font-light hidden sm:block">
-                      {stat.sub}
-                    </div>
-                  </div>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      </motion.div>
     </section>
   );
 };

@@ -9,12 +9,12 @@ import { CraftsmanshipShowcase } from '../components/home/CraftsmanshipShowcase'
 import { TestimonialsSection } from '../components/home/TestimonialsSection';
 import { LatestInsights } from '../components/home/LatestInsights';
 import { FaqAccordion } from '../components/home/FaqAccordion';
-import { CtaBanner } from '../components/home/CtaBanner';
+import { StatsStrip } from '../components/home/StatsStrip';
 
 export const Home: React.FC = () => {
   return (
     <div className="bg-white min-h-screen">
-      {/* 1. Hero Section with Integrated Stats Strip */}
+      {/* 1. Hero Section */}
       <Hero />
 
       {/* 2. About Split Story */}
@@ -23,31 +23,31 @@ export const Home: React.FC = () => {
       {/* 3. Core Disciplines / Services */}
       <ServicesStacked />
 
-      {/* 4. Selected Portfolio Works */}
+      {/* 4. Standalone Count Section with Architectural Background & Countable Stats */}
+      <StatsStrip />
+
+      {/* 5. Selected Portfolio Works */}
       <FeaturedProjects />
 
-      {/* 5. 6-Phase Process Timeline */}
+      {/* 6. 6-Phase Process Timeline */}
       <div id="process">
         <ProcessTimeline />
       </div>
 
-      {/* 6. Why Choose Us (8 Principles) */}
+      {/* 7. Why Choose Us (8 Principles) */}
       <WhyChooseUs />
 
-      {/* 7. Craftsmanship & Tectonics Showcase */}
+      {/* 8. Craftsmanship & Tectonics Showcase */}
       <CraftsmanshipShowcase />
 
-      {/* 8. Client Testimonials */}
+      {/* 9. Client Testimonials */}
       <TestimonialsSection />
 
-      {/* 9. Latest Journal / Articles */}
+      {/* 10. Latest Journal / Articles */}
       <LatestInsights />
 
-      {/* 10. FAQ Section */}
+      {/* 11. FAQ Section */}
       <FaqAccordion />
-
-      {/* 11. Cost Estimator / CTA Section */}
-      <CtaBanner />
     </div>
   );
 };

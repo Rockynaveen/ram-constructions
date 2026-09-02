@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { SectionHeading } from '../components/ui/SectionHeading';
 import { Button } from '../components/ui/Button';
 import { useAppStore } from '../store/useStore';
+import { StatsStrip } from '../components/home/StatsStrip';
 
 export const About: React.FC = () => {
   const { openConsultationModal } = useAppStore();
@@ -172,6 +173,10 @@ export const About: React.FC = () => {
           </div>
         </div>
       </section>
+
+      {/* Standalone Count Section with Architectural Background Image */}
+      <StatsStrip />
+
 
       {/* Call to Action */}
       <section className="py-10 text-center max-w-4xl mx-auto px-4">

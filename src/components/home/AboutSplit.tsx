@@ -7,9 +7,9 @@ import { Check, Award } from 'lucide-react';
 
 export const AboutSplit: React.FC = () => {
   return (
-    <section className="py-10 bg-white relative overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+    <section className="min-h-screen lg:h-screen lg:max-h-screen flex items-center bg-white relative overflow-hidden py-8 lg:py-0">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10 items-center">
           
           {/* Left Column: Asymmetric Architectural Imagery */}
           <motion.div
@@ -31,7 +31,7 @@ export const AboutSplit: React.FC = () => {
                 <span className="text-[10px] font-mono tracking-widest text-sky-300 uppercase block mb-1 font-bold">
                   RAM Constructions Philosophy
                 </span>
-                <p className="font-serif text-lg text-white font-normal">
+                <p className="font-serif text-base sm:text-lg text-white font-normal">
                   "Every millimeter matters when engineering a landmark home."
                 </p>
               </div>
@@ -44,7 +44,7 @@ export const AboutSplit: React.FC = () => {
                   <Award className="w-5 h-5 text-[#0284C7]" />
                 </div>
                 <div>
-                  <span className="text-lg font-serif text-[#0B2545] font-bold">15+ Years</span>
+                  <span className="text-lg font-serif text-[#0B2545] font-bold block leading-tight">15+ Years</span>
                   <span className="text-[9px] font-mono text-slate-500 block uppercase tracking-wider font-semibold">
                     Engineering Lineage
                   </span>
@@ -54,62 +54,58 @@ export const AboutSplit: React.FC = () => {
           </motion.div>
 
           {/* Right Column: Editorial Copy */}
-          <div className="lg:col-span-6 space-y-5 lg:pl-4">
+          <div className="lg:col-span-6 space-y-4 lg:pl-2">
             <SectionHeading
               eyebrow="Who We Are"
               title="We don’t just build structures."
               titleHighlight="We shape how people live."
-              description="RAM Constructions was founded on a singular conviction: that a residence should be an enduring work of architectural art, built with uncompromising structural discipline."
+              description="Founded on a singular conviction: every residence should be an enduring work of architectural art, executed by in-house master engineers with structural discipline."
             />
 
-            <p className="text-slate-600 font-normal leading-relaxed text-sm sm:text-base">
-              Unlike generic general contractors who outsource labor and manage projects from a distance, our in-house master engineers, structural designers, and artisans control every phase of construction.
-            </p>
-
             {/* Core Tenets Checklist */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-1">
-              <div className="flex items-start gap-3 p-3 bg-[#F8FAFC] rounded-lg border border-slate-100">
-                <div className="w-5 h-5 rounded-full bg-sky-100 flex items-center justify-center shrink-0 mt-0.5 border border-sky-200">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 pt-1">
+              <div className="flex items-center gap-2.5 p-2.5 bg-[#F8FAFC] rounded-lg border border-slate-100">
+                <div className="w-5 h-5 rounded-full bg-sky-100 flex items-center justify-center shrink-0 border border-sky-200">
                   <Check className="w-3 h-3 text-[#0284C7]" />
                 </div>
                 <div>
                   <strong className="text-xs font-mono text-[#0B2545] block uppercase tracking-wide">Integrated 3D BIM</strong>
-                  <span className="text-xs text-slate-500 font-light">Zero on-site design clashes</span>
+                  <span className="text-[11px] text-slate-500 font-light">Zero on-site clashes</span>
                 </div>
               </div>
 
-              <div className="flex items-start gap-3 p-3 bg-[#F8FAFC] rounded-lg border border-slate-100">
-                <div className="w-5 h-5 rounded-full bg-sky-100 flex items-center justify-center shrink-0 mt-0.5 border border-sky-200">
+              <div className="flex items-center gap-2.5 p-2.5 bg-[#F8FAFC] rounded-lg border border-slate-100">
+                <div className="w-5 h-5 rounded-full bg-sky-100 flex items-center justify-center shrink-0 border border-sky-200">
                   <Check className="w-3 h-3 text-[#0284C7]" />
                 </div>
                 <div>
                   <strong className="text-xs font-mono text-[#0B2545] block uppercase tracking-wide">Guaranteed Fixed Pricing</strong>
-                  <span className="text-xs text-slate-500 font-light">No escalation surprises</span>
+                  <span className="text-[11px] text-slate-500 font-light">No budget escalations</span>
                 </div>
               </div>
 
-              <div className="flex items-start gap-3 p-3 bg-[#F8FAFC] rounded-lg border border-slate-100">
-                <div className="w-5 h-5 rounded-full bg-sky-100 flex items-center justify-center shrink-0 mt-0.5 border border-sky-200">
+              <div className="flex items-center gap-2.5 p-2.5 bg-[#F8FAFC] rounded-lg border border-slate-100">
+                <div className="w-5 h-5 rounded-full bg-sky-100 flex items-center justify-center shrink-0 border border-sky-200">
                   <Check className="w-3 h-3 text-[#0284C7]" />
                 </div>
                 <div>
                   <strong className="text-xs font-mono text-[#0B2545] block uppercase tracking-wide">In-House Master Trades</strong>
-                  <span className="text-xs text-slate-500 font-light">No third-party subcontracting</span>
+                  <span className="text-[11px] text-slate-500 font-light">Zero third-party subcontracting</span>
                 </div>
               </div>
 
-              <div className="flex items-start gap-3 p-3 bg-[#F8FAFC] rounded-lg border border-slate-100">
-                <div className="w-5 h-5 rounded-full bg-sky-100 flex items-center justify-center shrink-0 mt-0.5 border border-sky-200">
+              <div className="flex items-center gap-2.5 p-2.5 bg-[#F8FAFC] rounded-lg border border-slate-100">
+                <div className="w-5 h-5 rounded-full bg-sky-100 flex items-center justify-center shrink-0 border border-sky-200">
                   <Check className="w-3 h-3 text-[#0284C7]" />
                 </div>
                 <div>
                   <strong className="text-xs font-mono text-[#0B2545] block uppercase tracking-wide">Live Digital Portal</strong>
-                  <span className="text-xs text-slate-500 font-light">Daily 360° photographic logs</span>
+                  <span className="text-[11px] text-slate-500 font-light">Daily 360° progress logs</span>
                 </div>
               </div>
             </div>
 
-            <div className="pt-2">
+            <div className="pt-1">
               <Link to="/about">
                 <Button variant="primary" size="md" icon="arrow-right">
                   Discover Our Lineage & Philosophy
