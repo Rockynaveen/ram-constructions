@@ -49,9 +49,9 @@ export const Navbar: React.FC = () => {
           : 'bg-white/90 backdrop-blur-sm py-1 sm:py-1.5'
       }`}
     >
-      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
+      <div className="max-w-[1440px] mx-auto pl-2 pr-4 sm:px-6 lg:px-8 flex items-center justify-between">
         {/* Brand Logo with exact official iconography */}
-        <Link to="/" className="flex items-center group -ml-2 sm:-ml-4 lg:-ml-6">
+        <Link to="/" className="flex items-center group -ml-1 sm:-ml-3 lg:-ml-6">
           <Logo size="md" theme="light" />
         </Link>
 
