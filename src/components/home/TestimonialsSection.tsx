@@ -17,23 +17,13 @@ export const TestimonialsSection: React.FC = () => {
   };
 
   return (
-    <section className="py-7 sm:py-10 lg:py-12 bg-slate-950 text-white relative overflow-hidden border-t border-slate-800">
-      {/* Background Architectural Image & Ambient Overlay */}
-      <div className="absolute inset-0 z-0">
-        <img
-          src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1920&q=80"
-          alt="RAM Constructions Completed Luxury Residence Architecture"
-          className="w-full h-full object-cover object-center scale-105"
-        />
-
-        {/* Transparent Black Overlays */}
-        <div className="absolute inset-0 bg-black/65 pointer-events-none" />
-        <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/70 to-black/90 pointer-events-none" />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/60 pointer-events-none" />
-
-        {/* Subtle grid accent */}
+    <section className="py-8 sm:py-10 lg:py-12 bg-[#050E1C] text-white relative overflow-hidden border-t border-slate-800">
+      {/* Background Architectural Ambient Glow & Grid */}
+      <div className="absolute inset-0 z-0 pointer-events-none">
+        <div className="absolute top-0 left-1/4 w-[450px] h-[450px] bg-[#0284C7]/12 rounded-full blur-[140px]" />
+        <div className="absolute bottom-0 right-1/4 w-[400px] h-[400px] bg-sky-500/10 rounded-full blur-[140px]" />
         <div 
-          className="absolute inset-0 opacity-10 pointer-events-none" 
+          className="absolute inset-0 opacity-10" 
           style={{
             backgroundImage: `linear-gradient(to right, rgba(255,255,255,0.06) 1px, transparent 1px), linear-gradient(to bottom, rgba(255,255,255,0.06) 1px, transparent 1px)`,
             backgroundSize: '40px 40px'

@@ -5,7 +5,6 @@ import { ServicesStacked } from '../components/home/ServicesStacked';
 import { FeaturedProjects } from '../components/home/FeaturedProjects';
 import { WhyChooseUs } from '../components/home/WhyChooseUs';
 import { TestimonialsSection } from '../components/home/TestimonialsSection';
-import { FaqAccordion } from '../components/home/FaqAccordion';
 import { StatsStrip } from '../components/home/StatsStrip';
 
 export const Home: React.FC = () => {
@@ -44,10 +43,7 @@ export const Home: React.FC = () => {
         <TestimonialsSection />
       </div>
 
-      {/* 8. FAQ Section */}
-      <div id="faq">
-        <FaqAccordion />
-      </div>
+
     </div>
   );
 };
