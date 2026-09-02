@@ -15,8 +15,6 @@ export const MobileMenu: React.FC = () => {
     { name: 'About', path: '/#about', targetId: 'about', subtitle: 'Philosophy, master builders & lineage' },
     { name: 'Services', path: '/#services', targetId: 'services', subtitle: 'Architecture, engineering & turnkey craft' },
     { name: 'Projects', path: '/#projects', targetId: 'projects', subtitle: 'Selected residential & commercial portfolio' },
-    { name: 'Process', path: '/#process', targetId: 'process', subtitle: '6-Phase turnkey execution roadmap' },
-    { name: 'Blog', path: '/#insights', targetId: 'insights', subtitle: 'Construction guides & architectural articles' },
     { name: 'Contact', path: '/contact', subtitle: 'Direct inquiry & studio locations' },
   ];
 

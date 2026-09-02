@@ -3,10 +3,8 @@ import { Hero } from '../components/home/Hero';
 import { AboutSplit } from '../components/home/AboutSplit';
 import { ServicesStacked } from '../components/home/ServicesStacked';
 import { FeaturedProjects } from '../components/home/FeaturedProjects';
-import { ProcessTimeline } from '../components/home/ProcessTimeline';
 import { WhyChooseUs } from '../components/home/WhyChooseUs';
 import { TestimonialsSection } from '../components/home/TestimonialsSection';
-import { BlogSection } from '../components/home/BlogSection';
 import { FaqAccordion } from '../components/home/FaqAccordion';
 import { StatsStrip } from '../components/home/StatsStrip';
 
@@ -36,27 +34,17 @@ export const Home: React.FC = () => {
         <FeaturedProjects />
       </div>
 
-      {/* 6. 6-Phase Process Timeline */}
-      <div id="process">
-        <ProcessTimeline />
-      </div>
-
-      {/* 7. Blog Section (Insights & Articles) */}
-      <div id="insights">
-        <BlogSection />
-      </div>
-
-      {/* 8. Why Choose Us (8 Principles) */}
+      {/* 6. Why Choose Us (8 Principles) */}
       <div id="why-us">
         <WhyChooseUs />
       </div>
 
-      {/* 9. Client Testimonials */}
+      {/* 7. Client Testimonials */}
       <div id="testimonials">
         <TestimonialsSection />
       </div>
 
-      {/* 10. FAQ Section */}
+      {/* 8. FAQ Section */}
       <div id="faq">
         <FaqAccordion />
       </div>
