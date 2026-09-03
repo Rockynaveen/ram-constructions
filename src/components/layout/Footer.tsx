@@ -13,73 +13,8 @@ export const Footer: React.FC = () => {
       {/* Background Architectural Grid Pattern */}
       <div className="absolute inset-0 bg-architectural-grid opacity-15 pointer-events-none" />
 
-      {/* Top CTA Banner */}
-      <div className="relative border-b border-white/10 py-8 overflow-hidden">
-        {/* Background Image */}
-        <div className="absolute inset-0 z-0">
-          <img
-            src="/images/ram-skyline-estate.jpg"
-            alt="Luxury Residence Architecture"
-            className="w-full h-full object-cover object-center"
-            onError={(e) => {
-              (e.target as HTMLImageElement).src = 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1920&q=80';
-            }}
-          />
-          {/* Deeper transparent black overlay */}
-          <div className="absolute inset-0 bg-black/65 pointer-events-none" />
-          <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/60 to-black/40 w-full pointer-events-none" />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-black/40 pointer-events-none" />
-        </div>
-
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-8">
-            <div className="max-w-2xl">
-              <div className="flex items-center gap-3 mb-2.5">
-                <span className="w-6 h-[2px] bg-[#38BDF8]" />
-                <span className="text-xs tracking-[0.25em] text-[#38BDF8] uppercase font-bold">
-                  Start Your Build
-                </span>
-              </div>
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl text-white font-bold leading-tight drop-shadow-md">
-                Have a residence or landmark in mind? <span className="text-[#38BDF8]">Let’s talk.</span>
-              </h2>
-              <p className="mt-3.5 text-sm sm:text-base font-normal text-slate-200 max-w-xl leading-relaxed drop-shadow-sm">
-                We accept a limited number of premium residential and commercial commissions each year to ensure rigorous executive oversight on every square foot.
-              </p>
-            </div>
-
-            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4 shrink-0 w-full sm:w-auto">
-              <Button
-                variant="primary"
-                size="md"
-                icon="arrow-right"
-                className="w-full sm:w-auto"
-                onClick={() => openConsultationModal()}
-              >
-                Schedule Private Consultation
-              </Button>
-              <Button 
-                variant="secondary" 
-                size="md" 
-                icon="arrow-up-right"
-                className="w-full sm:w-auto"
-                onClick={() => {
-                  const elem = document.getElementById('projects');
-                  if (elem) {
-                    elem.scrollIntoView({ behavior: 'smooth' });
-                    window.history.replaceState(null, '', '#projects');
-                  }
-                }}
-              >
-                View Selected Works
-              </Button>
-            </div>
-          </div>
-        </div>
-      </div>
-
       {/* Main Footer Links & Information */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <div className="max-w-[1440px] mx-auto px-6 sm:px-10 lg:px-14 py-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           {/* Col 1 & 2: Brand Identity */}
           <div className="lg:col-span-2 space-y-4">

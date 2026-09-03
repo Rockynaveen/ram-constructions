@@ -51,20 +51,21 @@ export const Navbar: React.FC = () => {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 h-18 h-[72px] flex items-center ${isScrolled
-        ? 'bg-white/90 backdrop-blur-xl border-b border-slate-200/80 shadow-[0_4px_30px_rgba(0,34,77,0.06)]'
-        : 'bg-white/75 backdrop-blur-md'
-        }`}
+      className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 h-18 h-[72px] flex items-center ${
+        isScrolled
+          ? 'bg-white/95 backdrop-blur-xl border-b border-slate-200/80 shadow-[0_4px_30px_rgba(0,34,77,0.08)]'
+          : 'bg-transparent border-b border-transparent'
+      }`}
     >
       <div className="w-full max-w-[1440px] mx-auto px-6 sm:px-10 lg:px-14 flex items-center justify-between h-full">
-        {/* Brand Logo with zero extra padding */}
+        {/* Brand Logo with dynamic light/dark contrast */}
         <Link 
           to="/" 
           onClick={handleLogoClick}
           className="flex items-center group p-0 m-0 transition-transform hover:scale-[1.01] cursor-pointer"
           aria-label="RAM Constructions Home"
         >
-          <Logo size="md" theme="light" />
+          <Logo size="md" theme={isScrolled ? 'light' : 'dark'} />
         </Link>
 
         {/* Center Navigation Links */}
@@ -79,12 +80,17 @@ export const Navbar: React.FC = () => {
                 key={link.name}
                 to={link.path}
                 onClick={(e) => handleNavClick(e, link.targetId)}
-                className={`text-[12px] font-sans tracking-[0.16em] uppercase transition-all duration-200 relative py-1 font-semibold ${isActive ? 'text-[#002D62] font-bold' : 'text-slate-600 hover:text-[#0072CE]'
-                  }`}
+                className={`text-[12px] font-sans tracking-[0.16em] uppercase transition-all duration-200 relative py-1 font-semibold ${
+                  isScrolled
+                    ? isActive ? 'text-[#002D62] font-bold' : 'text-slate-600 hover:text-[#0072CE]'
+                    : isActive ? 'text-[#38BDF8] font-bold' : 'text-slate-200 hover:text-white drop-shadow-sm'
+                }`}
               >
                 {link.name}
                 {isActive && (
-                  <span className="absolute -bottom-1 left-0 right-0 h-[2.5px] bg-gradient-to-r from-[#002D62] to-[#0072CE] rounded-full" />
+                  <span className={`absolute -bottom-1 left-0 right-0 h-[2.5px] rounded-full ${
+                    isScrolled ? 'bg-gradient-to-r from-[#002D62] to-[#0072CE]' : 'bg-[#38BDF8]'
+                  }`} />
                 )}
               </Link>
             );
@@ -95,7 +101,11 @@ export const Navbar: React.FC = () => {
         <div className="hidden lg:flex items-center">
           <button
             onClick={() => openConsultationModal()}
-            className="inline-flex items-center gap-2 bg-gradient-to-r from-[#00224D] via-[#002D62] to-[#0072CE] hover:brightness-110 text-white text-[11px] font-sans font-bold tracking-[0.14em] uppercase px-5 py-2 rounded-lg transition-all duration-300 shadow-sm shadow-[#00224D]/20 hover:shadow-md hover:shadow-[#0072CE]/25 hover:-translate-y-0.5 cursor-pointer group"
+            className={`inline-flex items-center gap-2 text-white text-[11px] font-sans font-bold tracking-[0.14em] uppercase px-5 py-2 rounded-lg transition-all duration-300 hover:-translate-y-0.5 cursor-pointer group ${
+              isScrolled
+                ? 'bg-gradient-to-r from-[#00224D] via-[#002D62] to-[#0072CE] hover:brightness-110 shadow-sm shadow-[#00224D]/20 hover:shadow-md hover:shadow-[#0072CE]/25'
+                : 'bg-gradient-to-r from-[#0072CE] via-[#0284C7] to-[#0072CE] hover:brightness-110 border border-[#38BDF8]/50 shadow-lg shadow-[#0072CE]/35'
+            }`}
           >
             <span>START A PROJECT</span>
             <ArrowRight className="w-3.5 h-3.5 transition-transform duration-200 group-hover:translate-x-1" />
@@ -106,13 +116,21 @@ export const Navbar: React.FC = () => {
         <div className="flex items-center gap-3 lg:hidden">
           <button
             onClick={() => openConsultationModal()}
-            className="text-[11px] font-bold tracking-wider uppercase bg-gradient-to-r from-[#00224D] to-[#0072CE] text-white px-3.5 py-2 rounded-lg shadow-sm"
+            className={`text-[11px] font-bold tracking-wider uppercase px-3.5 py-2 rounded-lg shadow-sm transition-all ${
+              isScrolled
+                ? 'bg-gradient-to-r from-[#00224D] to-[#0072CE] text-white'
+                : 'bg-gradient-to-r from-[#0072CE] to-[#0284C7] text-white border border-[#38BDF8]/50 shadow-md'
+            }`}
           >
             Inquire
           </button>
           <button
             onClick={toggleMobileMenu}
-            className="p-2 text-slate-700 hover:text-[#0072CE] bg-slate-100 hover:bg-slate-200 rounded-lg focus:outline-none cursor-pointer"
+            className={`p-2 rounded-lg focus:outline-none cursor-pointer transition-colors ${
+              isScrolled
+                ? 'text-slate-700 hover:text-[#0072CE] bg-slate-100 hover:bg-slate-200'
+                : 'text-white hover:text-white bg-white/15 hover:bg-white/25 border border-white/25'
+            }`}
             aria-label="Toggle menu"
           >
             {isMobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
