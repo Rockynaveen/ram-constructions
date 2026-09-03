@@ -63,7 +63,7 @@ export const FeaturedProjects: React.FC = () => {
             {/* Main Lead Spotlight Project (Col 8) */}
             {featured[0] && (
               <div className="lg:col-span-8 group">
-                <div className="block relative h-full min-h-[500px] sm:min-h-[560px] rounded-3xl overflow-hidden border border-slate-200/90 shadow-xl hover:shadow-2xl transition-all duration-500 bg-[#010B18] text-left">
+                <div className="block relative h-full min-h-[380px] sm:min-h-[480px] lg:min-h-[560px] rounded-2xl sm:rounded-3xl overflow-hidden border border-slate-200/90 shadow-xl hover:shadow-2xl transition-all duration-500 bg-[#010B18] text-left">
                   <img
                     src={featured[0].coverImage}
                     alt={featured[0].title}
@@ -74,8 +74,8 @@ export const FeaturedProjects: React.FC = () => {
                   <div className="absolute inset-0 bg-gradient-to-t from-[#010B18]/95 via-[#001738]/45 to-transparent" />
 
                   {/* Top Badges */}
-                  <div className="absolute top-6 left-6 right-6 flex items-center justify-between z-10">
-                    <span className={`text-[11px] font-sans font-bold tracking-wider uppercase px-3.5 py-1.5 rounded-lg shadow-md flex items-center gap-1.5 ${
+                  <div className="absolute top-4 sm:top-6 left-4 sm:left-6 right-4 sm:right-6 flex items-center justify-between z-10">
+                    <span className={`text-[10px] sm:text-[11px] font-sans font-bold tracking-wider uppercase px-3 sm:px-3.5 py-1 sm:py-1.5 rounded-lg shadow-md flex items-center gap-1.5 ${
                       featured[0].status === 'Ongoing'
                         ? 'bg-amber-500 text-white'
                         : 'bg-[#0072CE] text-white'
@@ -85,35 +85,35 @@ export const FeaturedProjects: React.FC = () => {
                       )}
                       {featured[0].status || featured[0].category}
                     </span>
-                    <span className="text-xs font-sans font-bold text-sky-200 bg-[#001738]/85 backdrop-blur-md px-3.5 py-1.5 rounded-lg border border-white/20">
+                    <span className="text-[11px] sm:text-xs font-sans font-bold text-sky-200 bg-[#001738]/85 backdrop-blur-md px-2.5 sm:px-3.5 py-1 sm:py-1.5 rounded-lg border border-white/20">
                       {featured[0].status === 'Ongoing' ? `Delivery ${featured[0].year}` : `${featured[0].year} Handover`}
                     </span>
                   </div>
 
                   {/* Bottom Information Panel */}
-                  <div className="absolute bottom-7 left-7 right-7 z-10 text-white">
-                    <div className="flex items-center gap-2 text-xs font-sans font-medium text-sky-300 mb-2">
-                      <MapPin className="w-3.5 h-3.5 text-[#38BDF8]" />
+                  <div className="absolute bottom-4 sm:bottom-7 left-4 sm:left-7 right-4 sm:right-7 z-10 text-white">
+                    <div className="flex items-center gap-2 text-xs font-sans font-medium text-sky-300 mb-1.5 sm:mb-2">
+                      <MapPin className="w-3.5 h-3.5 text-[#38BDF8] shrink-0" />
                       <span>{featured[0].location}</span>
                       <span className="mx-1">•</span>
                       <span>{featured[0].area}</span>
                     </div>
 
-                    <h3 className="font-editorial-serif text-2xl sm:text-4xl lg:text-[2.75rem] font-medium text-white transition-colors leading-[1.15] drop-shadow-md">
+                    <h3 className="font-sans text-xl sm:text-3xl lg:text-[2.5rem] font-bold text-white transition-colors leading-[1.18] drop-shadow-md">
                       {featured[0].title}
                     </h3>
 
-                    <p className="text-xs sm:text-sm font-normal text-slate-200 mt-2.5 line-clamp-2 max-w-2xl leading-relaxed">
+                    <p className="text-xs sm:text-sm font-normal text-slate-200 mt-2 sm:mt-2.5 line-clamp-2 max-w-2xl leading-relaxed">
                       {featured[0].tagline}
                     </p>
 
-                    <div className="mt-6 pt-4 border-t border-white/15 flex items-center justify-between">
+                    <div className="mt-4 sm:mt-6 pt-3 sm:pt-4 border-t border-white/15 flex flex-wrap items-center justify-between gap-2">
                       <span className="text-xs font-sans text-[#38BDF8] font-bold flex items-center gap-1.5">
-                        <IndianRupee className="w-3.5 h-3.5" />
+                        <IndianRupee className="w-3.5 h-3.5 shrink-0" />
                         <span>Budget: {featured[0].budgetRange}</span>
                       </span>
-                      <span className="inline-flex items-center gap-1.5 text-xs font-sans font-bold text-sky-200 uppercase tracking-wider bg-white/10 backdrop-blur-md px-3.5 py-1.5 rounded-lg border border-white/20">
-                        <Sparkles className="w-3.5 h-3.5 text-[#38BDF8]" />
+                      <span className="inline-flex items-center gap-1.5 text-[11px] sm:text-xs font-sans font-bold text-sky-200 uppercase tracking-wider bg-white/10 backdrop-blur-md px-3 py-1 sm:px-3.5 sm:py-1.5 rounded-lg border border-white/20">
+                        <Sparkles className="w-3.5 h-3.5 text-[#38BDF8] shrink-0" />
                         <span>Turnkey Landmark</span>
                       </span>
                     </div>
@@ -154,7 +154,7 @@ export const FeaturedProjects: React.FC = () => {
                         <span>{item.location}</span>
                       </div>
 
-                      <h4 className="font-editorial-serif text-lg sm:text-xl font-medium text-white transition-colors leading-snug">
+                      <h4 className="font-sans text-base sm:text-xl font-bold text-white transition-colors leading-snug">
                         {item.title}
                       </h4>
 
@@ -201,7 +201,7 @@ export const FeaturedProjects: React.FC = () => {
                       </span>
                     </div>
 
-                    <h4 className="font-editorial-serif text-xl sm:text-2xl font-medium text-white transition-colors leading-snug">
+                    <h4 className="font-sans text-lg sm:text-2xl font-bold text-white transition-colors leading-snug">
                       {item.title}
                     </h4>
 

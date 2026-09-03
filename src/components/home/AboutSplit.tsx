@@ -25,18 +25,18 @@ export const AboutSplit: React.FC = () => {
               <img
                 src="/images/who-we-are.jpg"
                 alt="Architects and Engineers on site - RAM Constructions"
-                className="w-full h-[420px] sm:h-[500px] object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                className="w-full h-[320px] sm:h-[460px] lg:h-[500px] object-cover transition-transform duration-700 ease-out group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#001738]/95 via-[#00224D]/35 to-transparent" />
               
-              <div className="absolute bottom-7 left-7 right-7">
-                <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#001738]/85 backdrop-blur-md border border-white/20 mb-2.5 shadow-md">
+              <div className="absolute bottom-4 sm:bottom-7 left-4 sm:left-7 right-4 sm:right-7">
+                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#001738]/85 backdrop-blur-md border border-white/20 mb-2 shadow-md">
                   <Sparkles className="w-3.5 h-3.5 text-[#38BDF8]" />
-                  <span className="text-[11px] tracking-widest text-sky-200 uppercase font-bold">
+                  <span className="text-[10px] sm:text-[11px] tracking-widest text-sky-200 uppercase font-bold">
                     Executive Atelier Philosophy
                   </span>
                 </div>
-                <p className="text-xl sm:text-2xl text-white font-sans font-medium leading-snug drop-shadow-md">
+                <p className="text-base sm:text-xl lg:text-2xl text-white font-sans font-medium leading-snug drop-shadow-md">
                   "Every millimeter matters when engineering a landmark home."
                 </p>
               </div>
@@ -103,6 +103,7 @@ export const AboutSplit: React.FC = () => {
                 variant="primary" 
                 size="md" 
                 icon="arrow-right"
+                className="w-full sm:w-auto"
                 onClick={() => {
                   const elem = document.getElementById('services');
                   if (elem) {

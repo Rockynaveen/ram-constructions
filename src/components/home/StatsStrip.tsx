@@ -77,10 +77,10 @@ export const StatsStrip: React.FC = () => {
         </div>
 
         {/* 4 Clean Stats Grid with Luminous Typography */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 text-center divide-y md:divide-y-0 md:divide-x divide-white/15 py-4">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6 md:gap-8 text-center py-2 sm:py-4">
           {stats.map((stat, idx) => (
-            <div key={idx} className="pt-4 md:pt-0 md:px-4 flex flex-col items-center justify-center">
-              <div className="text-3xl sm:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-white via-[#7DD3FC] to-[#0072CE] bg-clip-text text-transparent tracking-tight drop-shadow-md">
+            <div key={idx} className="p-3.5 sm:p-5 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-xs flex flex-col items-center justify-center transition-all hover:bg-white/10">
+              <div className="text-2xl sm:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-white via-[#7DD3FC] to-[#0072CE] bg-clip-text text-transparent tracking-tight drop-shadow-md">
                 <AnimatedCounter
                   value={stat.value}
                   suffix={stat.suffix}
@@ -89,7 +89,7 @@ export const StatsStrip: React.FC = () => {
                   duration={2.2}
                 />
               </div>
-              <p className="mt-2 text-xs sm:text-sm font-sans font-semibold text-slate-200 tracking-wide drop-shadow-sm">
+              <p className="mt-1.5 sm:mt-2 text-[11px] sm:text-sm font-sans font-semibold text-slate-200 tracking-wide drop-shadow-sm">
                 {stat.label}
               </p>
             </div>

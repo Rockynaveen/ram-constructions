@@ -153,7 +153,7 @@ export const CarouselItem = React.forwardRef<
     <div
       ref={ref}
       className={cn(
-        "snap-start shrink-0 w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] xl:w-[calc(25%-18px)] min-w-0",
+        "snap-start shrink-0 w-[88%] sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] xl:w-[calc(25%-18px)] min-w-0",
         className
       )}
       {...props}
@@ -180,7 +180,7 @@ export const CarouselPrevious = React.forwardRef<
       }}
       aria-label="Previous slide"
       className={cn(
-        "absolute -left-2 sm:-left-4 lg:-left-6 top-1/2 -translate-y-1/2 z-30 w-11 h-11 rounded-full border border-slate-200 bg-white/95 backdrop-blur-md text-slate-800 hover:text-white hover:bg-[#0284C7] hover:border-[#0284C7] shadow-xl shadow-slate-900/15 transition-all duration-200 flex items-center justify-center cursor-pointer active:scale-95 pointer-events-auto",
+        "hidden sm:flex absolute -left-2 sm:-left-4 lg:-left-6 top-1/2 -translate-y-1/2 z-30 w-11 h-11 rounded-full border border-slate-200 bg-white/95 backdrop-blur-md text-slate-800 hover:text-white hover:bg-[#0072CE] hover:border-[#0072CE] shadow-xl shadow-slate-900/15 transition-all duration-200 items-center justify-center cursor-pointer active:scale-95 pointer-events-auto",
         className
       )}
       {...props}
@@ -207,7 +207,7 @@ export const CarouselNext = React.forwardRef<
       }}
       aria-label="Next slide"
       className={cn(
-        "absolute -right-2 sm:-right-4 lg:-right-6 top-1/2 -translate-y-1/2 z-30 w-11 h-11 rounded-full border border-slate-200 bg-white/95 backdrop-blur-md text-slate-800 hover:text-white hover:bg-[#0284C7] hover:border-[#0284C7] shadow-xl shadow-slate-900/15 transition-all duration-200 flex items-center justify-center cursor-pointer active:scale-95 pointer-events-auto",
+        "hidden sm:flex absolute -right-2 sm:-right-4 lg:-right-6 top-1/2 -translate-y-1/2 z-30 w-11 h-11 rounded-full border border-slate-200 bg-white/95 backdrop-blur-md text-slate-800 hover:text-white hover:bg-[#0072CE] hover:border-[#0072CE] shadow-xl shadow-slate-900/15 transition-all duration-200 items-center justify-center cursor-pointer active:scale-95 pointer-events-auto",
         className
       )}
       {...props}

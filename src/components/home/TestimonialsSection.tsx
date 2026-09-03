@@ -56,8 +56,8 @@ export const TestimonialsSection: React.FC = () => {
         </div>
 
         {/* Featured Editorial Spotlight Box (Rich Obsidian/Navy Monolith) */}
-        <div className="bg-gradient-to-br from-[#010B18] via-[#001738] to-[#000E24] text-white border border-[#0072CE]/35 rounded-3xl p-7 sm:p-9 lg:p-12 shadow-2xl shadow-black/25 relative overflow-hidden">
-          <Quote className="w-24 h-24 sm:w-28 sm:h-28 text-white/5 absolute top-4 right-4 sm:top-6 sm:right-6 pointer-events-none" />
+        <div className="bg-gradient-to-br from-[#010B18] via-[#001738] to-[#000E24] text-white border border-[#0072CE]/35 rounded-2xl sm:rounded-3xl p-5 sm:p-9 lg:p-12 shadow-2xl shadow-black/25 relative overflow-hidden">
+          <Quote className="w-20 h-20 sm:w-28 sm:h-28 text-white/5 absolute top-4 right-4 sm:top-6 sm:right-6 pointer-events-none" />
 
           <AnimatePresence mode="wait">
             <motion.div
@@ -107,7 +107,7 @@ export const TestimonialsSection: React.FC = () => {
                   <span className="text-xs font-mono text-sky-200 ml-2 font-bold tracking-wide">5.0 / 5.0 VERIFIED CLIENT</span>
                 </div>
 
-                <blockquote className="font-sans text-lg sm:text-xl lg:text-2xl text-white leading-relaxed font-normal drop-shadow-sm">
+                <blockquote className="font-sans text-sm sm:text-base lg:text-[17px] text-slate-100 leading-relaxed font-normal drop-shadow-sm">
                   "{current.quote}"
                 </blockquote>
 

@@ -130,7 +130,7 @@ export const ConsultationModal: React.FC = () => {
                     RAM Constructions Concierge
                   </span>
                 </div>
-                <h2 className="font-serif text-2xl sm:text-3xl font-bold text-[#00224D] leading-tight">
+                <h2 className="font-sans text-xl sm:text-2xl lg:text-3xl font-bold text-[#00224D] leading-tight">
                   Request Architectural Consultation
                 </h2>
                 <p className="text-xs text-slate-500 font-normal mt-1 leading-relaxed">

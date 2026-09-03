@@ -57,7 +57,7 @@ export const MobileMenu: React.FC = () => {
             </Link>
             <button
               onClick={closeMobileMenu}
-              className="p-2 text-slate-600 hover:text-[#0284C7] bg-slate-100 hover:bg-slate-200 border border-slate-200 rounded-sm cursor-pointer"
+              className="p-2 text-slate-600 hover:text-[#0072CE] bg-slate-100 hover:bg-slate-200 border border-slate-200 rounded-lg cursor-pointer"
               aria-label="Close menu"
             >
               <X className="w-5 h-5" />
@@ -84,8 +84,8 @@ export const MobileMenu: React.FC = () => {
                     className="block group py-1.5 border-b border-slate-100 pb-2.5"
                   >
                     <div className="flex items-center justify-between">
-                      <span className={`font-serif text-xl transition-colors ${
-                        isActive ? 'text-[#0284C7] font-semibold' : 'text-[#0B2545] group-hover:text-[#0284C7]'
+                      <span className={`font-sans text-base sm:text-lg transition-colors ${
+                        isActive ? 'text-[#0072CE] font-bold' : 'text-[#001738] font-bold group-hover:text-[#0072CE]'
                       }`}>
                         {link.name}
                       </span>

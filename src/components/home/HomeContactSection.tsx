@@ -156,7 +156,7 @@ export const HomeContactSection: React.FC = () => {
           </div>
 
           {/* RIGHT COLUMN: Clean Standardized Form (Col 7) */}
-          <div className="lg:col-span-7 bg-white border border-slate-200 rounded-2xl shadow-lg p-6 sm:p-8">
+          <div className="lg:col-span-7 bg-white border border-slate-200 rounded-2xl shadow-lg p-5 sm:p-8">
             
             <div className="mb-6 pb-3 border-b border-slate-100">
               <span className="text-[11px] font-bold uppercase tracking-wider text-[#0072CE] block mb-1">

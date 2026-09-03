@@ -48,11 +48,12 @@ export const Footer: React.FC = () => {
               </p>
             </div>
 
-            <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 shrink-0">
+            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4 shrink-0 w-full sm:w-auto">
               <Button
                 variant="primary"
                 size="md"
                 icon="arrow-right"
+                className="w-full sm:w-auto"
                 onClick={() => openConsultationModal()}
               >
                 Schedule Private Consultation
@@ -61,6 +62,7 @@ export const Footer: React.FC = () => {
                 variant="secondary" 
                 size="md" 
                 icon="arrow-up-right"
+                className="w-full sm:w-auto"
                 onClick={() => {
                   const elem = document.getElementById('projects');
                   if (elem) {
@@ -236,7 +238,7 @@ export const Footer: React.FC = () => {
             </span>
           </p>
 
-          <div className="flex items-center gap-6">
+          <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-6">
             <span className="text-slate-400">Privacy Policy</span>
             <span className="text-slate-400">Terms of Engagement</span>
             <span className="text-[#38BDF8]">Architecture • Engineering</span>
