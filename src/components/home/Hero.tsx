@@ -72,7 +72,7 @@ export const Hero: React.FC = () => {
               {/* Primary Button */}
               <button
                 onClick={() => openConsultationModal()}
-                className="inline-flex items-center justify-center gap-2.5 bg-gradient-to-r from-[#001738] via-[#00224D] to-[#0072CE] hover:brightness-110 text-white text-xs sm:text-[12px] font-sans font-bold tracking-[0.14em] uppercase px-7 py-3.5 rounded-lg transition-all duration-300 shadow-md shadow-[#001738]/30 hover:shadow-lg hover:shadow-[#0072CE]/35 hover:-translate-y-0.5 cursor-pointer group active:scale-[0.99]"
+                className="inline-flex items-center justify-center gap-2.5 bg-gradient-to-r from-[#0072CE] via-[#0284C7] to-[#0072CE] hover:from-[#005fb0] hover:to-[#0284C7] text-white text-xs sm:text-[12px] font-sans font-bold tracking-[0.14em] uppercase px-7 py-3.5 rounded-lg border border-[#38BDF8]/50 transition-all duration-300 shadow-lg shadow-[#0072CE]/35 hover:shadow-xl hover:shadow-[#0072CE]/50 hover:-translate-y-0.5 cursor-pointer group active:scale-[0.99]"
               >
                 <span>START YOUR PROJECT</span>
                 <ArrowRight className="w-3.5 h-3.5 transition-transform duration-200 group-hover:translate-x-1" />

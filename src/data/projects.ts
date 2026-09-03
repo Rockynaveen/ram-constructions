@@ -62,6 +62,48 @@ export const projectsData: Project[] = [
     }
   },
   {
+    id: 'nexus-galleria-mall',
+    slug: 'the-nexus-galleria',
+    title: 'The Nexus Galleria & Sky Dome Mall',
+    tagline: 'Iconic diagrid glass dome canopy, multi-tier retail terraces, elevated transit integration, and public amphitheater.',
+    category: 'Commercial',
+    status: 'Completed',
+    location: 'HITEC City, Hyderabad',
+    year: '2024',
+    area: '420,000 sq.ft',
+    duration: '28 Months',
+    budgetRange: '₹95 Cr - ₹110 Cr',
+    coverImage: '/images/shopping mall.jfif',
+    heroImage: '/images/shopping mall.jfif',
+    gallery: [
+      {
+        url: '/images/shopping mall.jfif',
+        caption: 'The completed Nexus Galleria grand retail atrium, illuminated water plaza, and transit monorail.',
+        aspectRatio: 'wide'
+      }
+    ],
+    overview: 'A flagship completed luxury lifestyle mall and entertainment destination featuring a sweeping geodesic glass skylight dome, terraced dining promenades, elevated transit viaducts, and a grand public civic amphitheater.',
+    architecturalConcept: 'Organic diagrid glass canopy providing climate-protected daylighting, surrounded by lush vertical landscaped gardens and seamless multi-modal transit access.',
+    spatialFeatures: [
+      'Monumental geodesic glass dome spanning 75 meters column-free',
+      'Integrated light-rail monorail transit concourse and passenger terminal',
+      'Multi-tier cascading terrace dining overlooking civic water plaza',
+      'Central sunken amphitheater and fire hearth for public cultural gatherings',
+      'Quad-level subterranean smart parking facility with 1,800 bays'
+    ],
+    materials: [
+      { name: 'Geodesic Steel Diagrid', description: 'Triangulated structural steel framework with automated ventilation louvers.' },
+      { name: 'Low-E Fritted Glass', description: 'Double-laminated solar control acoustic panels with ceramic frit pattern.' },
+      { name: 'Flamed Indian Granite', description: 'Heavy-duty non-slip civic plaza paving in silver and charcoal granite.' }
+    ],
+    specifications: [
+      { label: 'Dome Structure', value: '75m Clear-Span Spatial Steel Diagrid' },
+      { label: 'Green Certification', value: 'LEED Platinum Commercial Core & Shell' },
+      { label: 'HVAC', value: 'Water-Cooled Centrifugal Chillers with Heat Recovery' }
+    ],
+    featured: true
+  },
+  {
     id: 'glass-pavilion-estate',
     slug: 'the-glass-pavilion',
     title: 'The Glass Pavilion Estate',
@@ -151,39 +193,41 @@ export const projectsData: Project[] = [
     featured: true
   },
   {
-    id: 'botanica-residence',
-    slug: 'the-botanica-residence',
-    title: 'The Botanica Residence',
-    tagline: 'A seamless blend of Japanese wabi-sabi minimalism and tropical modernism.',
-    category: 'Residential',
+    id: 'quantum-corporate-tower',
+    slug: 'quantum-corporate-tower',
+    title: 'Quantum Corporate Tower & Civic Plaza',
+    tagline: 'Sculptural twisting glass facade, post-tensioned cantilevered spans, and integrated public landscape plaza.',
+    category: 'Commercial',
     status: 'Completed',
     location: 'Financial District, Hyderabad',
     year: '2024',
-    area: '6,800 sq.ft',
-    duration: '13 Months',
-    budgetRange: '₹3.6 Cr - ₹4.1 Cr',
-    coverImage: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=80',
-    heroImage: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=2000&q=85',
+    area: '280,000 sq.ft',
+    duration: '24 Months',
+    budgetRange: '₹54 Cr - ₹62 Cr',
+    coverImage: '/images/complted proj-1.jfif',
+    heroImage: '/images/complted proj-1.jfif',
     gallery: [
       {
-        url: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=80',
-        caption: 'Completed luxury residence with warm ambient landscape illumination.',
+        url: '/images/complted proj-1.jfif',
+        caption: 'Pristine completed glass facade and landscaped arrival plaza at Quantum Tower.',
         aspectRatio: 'wide'
       }
     ],
-    overview: 'Designed for multi-generational living, Botanica pairs quiet reflective courtyards with open entertainment zones crafted in pale lime plaster and smoked oak.',
-    architecturalConcept: 'Interlocking garden courtyards that give every bedroom a personal, enclosed landscape view.',
+    overview: 'A signature completed commercial skyscraper featuring an engineering-led twisting structural glass curtain wall, civic arrival plaza, and grade-A corporate suites.',
+    architecturalConcept: 'Sculptural twisting geometry designed to minimize wind shear forces while optimizing natural illumination across all floor plates.',
     spatialFeatures: [
-      'Four distinct micro-gardens linked through covered timber pergolas',
-      'Bespoke Japanese soaking tub carved from solid volcanic rock',
-      'Hidden acoustic multi-media studio'
+      'Multi-tier central glass atrium and public pedestrian greens',
+      'High-speed destination-dispatch smart elevator banks',
+      'Integrated water reflection pond and urban landscape terraces',
+      'Triple-level underground parking with advanced EV infrastructure'
     ],
     materials: [
-      { name: 'Lime Plaster', description: 'Natural breathable hydraulic lime finish in oyster white.' },
-      { name: 'Shou Sugi Ban Timber', description: 'Charred Japanese cedar offering natural weather resistance.' }
+      { name: 'Unitized Structural Glazing', description: 'Double-glazed Low-E solar reflective curtain wall system.' },
+      { name: 'Post-Tensioned Concrete', description: 'High-strength M60 concrete with bonded PT tendons.' }
     ],
     specifications: [
-      { label: 'Ventilation', value: 'Heat Recovery Ventilation (HRV) System' }
+      { label: 'Structural Type', value: 'RCC Core Wall with Post-Tensioned Flat Slabs' },
+      { label: 'Green Certification', value: 'IGBC Platinum Rated Sustainable High-Rise' }
     ],
     featured: true
   },
@@ -271,39 +315,41 @@ export const projectsData: Project[] = [
     featured: true
   },
   {
-    id: 'heritage-manor-restoration',
-    slug: 'the-heritage-manor',
-    title: 'The Heritage Manor Restoration',
-    tagline: 'Sensitively restoring a 1930s colonial estate with modern structural reinforcement.',
-    category: 'Renovation',
+    id: 'cyber-towers-nexus-hub',
+    slug: 'cyber-towers-nexus-hub',
+    title: 'Cyber Towers Nexus Hub',
+    tagline: 'Illuminated sculptural helical tower, sky gardens, elevated transit links, and civic amphitheater.',
+    category: 'Commercial',
     status: 'Completed',
-    location: 'Secunderabad, Telangana',
-    year: '2023',
-    area: '8,100 sq.ft',
-    duration: '15 Months',
-    budgetRange: '₹3.9 Cr - ₹4.4 Cr',
-    coverImage: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1600&q=80',
-    heroImage: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=2000&q=85',
+    location: 'HITEC City, Hyderabad',
+    year: '2024',
+    area: '340,000 sq.ft',
+    duration: '26 Months',
+    budgetRange: '₹68 Cr - ₹78 Cr',
+    coverImage: '/images/proj-2.jfif',
+    heroImage: '/images/proj-2.jfif',
     gallery: [
       {
-        url: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1600&q=80',
-        caption: 'Restored grand colonial estate with manicured exterior grounds and finished portico.',
+        url: '/images/proj-2.jfif',
+        caption: 'Night-time illumination of the completed Cyber Towers Nexus Hub, elevated transit monorail, and central civic amphitheater.',
         aspectRatio: 'wide'
       }
     ],
-    overview: 'An extensive historic restoration and contemporary modernization of a 90-year-old estate, preserving heritage arches while embedding complete modern insulation and smart HVAC.',
-    architecturalConcept: 'Honoring heritage masonry while discreetly integrating high-efficiency structural carbon wraps and invisible thermal solutions.',
+    overview: 'An iconic completed civic and commercial nexus featuring a helical twisting glass superstructure, spiral sky gardens, seamless light rail integration, and public amphitheater.',
+    architecturalConcept: 'Biophilic helical geometry merging vertical gardens with advanced kinetic lighting and smart mass-transit connectivity.',
     spatialFeatures: [
-      'Underpinning and carbon fiber stabilization of load-bearing rubble walls',
-      'Restored high-ceiling teak wood trusses and handmade clay tile roof',
-      'Modern open-concept rear kitchen extension facing the orchard'
+      'Multi-level public civic amphitheater with reflecting pools and urban hearth',
+      'Spiral sky gardens wrapping 360 degrees around the illuminated tower',
+      'Integrated elevated transit terminal connection with direct concourse access',
+      'Ultra-high efficiency structural diagrid steel and RCC core'
     ],
     materials: [
-      { name: 'Hydraulic Lime Mortar', description: 'Custom formulated breathable mix matched to 1930s chemistry.' },
-      { name: 'Salvaged Antique Teak', description: 'Hand-restored 100-year-old seasoned wood timbers.' }
+      { name: 'Parametric Diagrid Steel', description: 'Curved structural steel frame with continuous LED ribbon integration.' },
+      { name: 'Low-E Smart Glass', description: 'Dynamic tinting solar responsive glazing for high thermal performance.' }
     ],
     specifications: [
-      { label: 'Structural Reinforcement', value: 'Sika Carbon Fiber Wrap & Micro-piling' }
+      { label: 'Structural Type', value: 'Central Slipformed RCC Core with Diagrid Exoskeleton' },
+      { label: 'Rating', value: 'IGBC Platinum & Smart City Infrastructure Certified' }
     ],
     featured: true
   },

@@ -9,7 +9,7 @@ export const servicesData: Service[] = [
     tagline: 'End-to-end bespoke villa and luxury home construction executed with structural mastery.',
     shortDescription: 'We build architecturally ambitious residences with uncompromising quality control, guaranteed fixed pricing, and digital milestone tracking.',
     fullDescription: 'From subterranean foundations to delicate rooftop finishes, our residential construction practice delivers heirloom-quality homes. We eliminate the friction of traditional contracting through in-house master engineers, rigorous structural quality protocols, and strict timeline adherence.',
-    heroImage: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1800&q=80',
+    heroImage: '/images/residentail-construction.png',
     iconName: 'Home',
     deliverables: [
       'Comprehensive Site Survey, Soil Testing & Geo-Technical Analysis',
@@ -57,7 +57,7 @@ export const servicesData: Service[] = [
     tagline: 'High-performance commercial buildings, boutique headquarters, and retail spaces.',
     shortDescription: 'Delivering landmark commercial spaces with rigorous structural engineering, fast-track scheduling, and sustainable building systems.',
     fullDescription: 'We engineer commercial and institutional properties that reflect corporate prestige while maximizing operational efficiency. Our commercial team specializes in large-span structures, energy-efficient building envelopes, and advanced MEP installations.',
-    heroImage: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1800&q=80',
+    heroImage: '/images/comerical building.jfif',
     iconName: 'Building2',
     deliverables: [
       'Turnkey Commercial Shell & Core Construction',
@@ -99,7 +99,7 @@ export const servicesData: Service[] = [
     tagline: 'Visionary spatial design backed by mathematically rigorous structural engineering.',
     shortDescription: 'We merge artistic architectural form with cutting-edge structural modeling in 3D BIM, delivering plans optimized for buildability and beauty.',
     fullDescription: 'Great architecture begins with an intuitive understanding of light, climate, and human movement. Our architecture and structural division works as an integrated unit, ensuring bold design ideas are backed by sound engineering calculations from day one.',
-    heroImage: 'https://images.unsplash.com/photo-1600585152220-90363fe7e115?auto=format&fit=crop&w=1800&q=80',
+    heroImage: '/images/archeterctual.jfif',
     iconName: 'Compass',
     deliverables: [
       'Comprehensive Concept Architectural Masterplans',
@@ -141,7 +141,7 @@ export const servicesData: Service[] = [
     tagline: 'Bespoke interior architecture, custom millwork, and sensory materiality.',
     shortDescription: 'Harmonious living environments sculpted with rare natural stones, warm seasoned timbers, curated architectural lighting, and artisanal joinery.',
     fullDescription: 'Our interior architecture practice crafts spaces that feel calm, tactile, and deeply personalized. We do not apply superficial decor; we sculpt volumes, direct shadow and illumination, and manufacture custom joinery in our dedicated millwork facility.',
-    heroImage: 'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1800&q=80',
+    heroImage: '/images/interion.jfif',
     iconName: 'Sparkles',
     deliverables: [
       'Custom Millwork & Architectural Joinery Manufacturing',
@@ -183,7 +183,7 @@ export const servicesData: Service[] = [
     tagline: 'Transforming existing structures through structural retrofitting and modern aesthetic renewal.',
     shortDescription: 'Breathing new life into older homes and estates through seismic reinforcement, spatial reconfiguration, and contemporary finishes.',
     fullDescription: 'Whether modernizing an aging 1990s villa or sensitively restoring a heritage estate, our renovation division tackles complex structural retrofitting, wall removals, MEP overhauls, and envelope rejuvenation with minimal disturbance.',
-    heroImage: 'https://images.unsplash.com/photo-1580587771525-78b9dba3b914?auto=format&fit=crop&w=1800&q=80',
+    heroImage: '/images/renovating & remodeling.jfif',
     iconName: 'Wrench',
     deliverables: [
       'Non-Destructive Structural Condition Assessment',

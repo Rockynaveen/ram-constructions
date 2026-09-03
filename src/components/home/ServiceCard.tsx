@@ -61,7 +61,7 @@ export const ServiceCard: React.FC<ServiceCardProps> = ({ service }) => {
       className="relative w-full h-[440px] perspective-1000 group focus:outline-none select-none cursor-pointer"
     >
       <div
-        className={`relative w-full h-full preserve-3d transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] rounded-2xl shadow-lg hover:shadow-2xl hover:shadow-[#00224D]/25 ${
+        className={`relative w-full h-full preserve-3d transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] rounded-2xl ${
           isFlipped ? 'rotate-y-180' : 'group-hover:rotate-y-180 group-focus-within:rotate-y-180'
         }`}
       >
@@ -107,7 +107,7 @@ export const ServiceCard: React.FC<ServiceCardProps> = ({ service }) => {
         </div>
 
         {/* CARD BACK SIDE */}
-        <div className="absolute inset-0 w-full h-full rounded-2xl p-6 bg-[#00224D] border border-[#0072CE]/40 text-white flex flex-col justify-between backface-hidden rotate-y-180 shadow-2xl overflow-hidden">
+        <div className="absolute inset-0 w-full h-full rounded-2xl p-6 bg-[#00224D] border border-[#0072CE]/40 text-white flex flex-col justify-between backface-hidden rotate-y-180 overflow-hidden">
           {/* Subtle architectural grid pattern background */}
           <div className="absolute inset-0 bg-light-grid opacity-15 pointer-events-none" />
 
