@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { useAppStore } from '../../store/useStore';
-import { Button } from '../ui/Button';
 import { Logo } from '../ui/Logo';
 import { ShieldCheck } from 'lucide-react';
 
