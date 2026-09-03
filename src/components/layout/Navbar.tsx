@@ -27,7 +27,7 @@ export const Navbar: React.FC = () => {
     { name: 'ABOUT', path: '/#about', targetId: 'about' },
     { name: 'SERVICES', path: '/#services', targetId: 'services' },
     { name: 'PROJECTS', path: '/#projects', targetId: 'projects' },
-    { name: 'CONTACT', path: '/contact' },
+    { name: 'CONTACT', path: '/#contact', targetId: 'contact' },
   ];
 
   const handleNavClick = (e: React.MouseEvent, targetId?: string) => {
@@ -45,8 +45,8 @@ export const Navbar: React.FC = () => {
     <header
       className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${
         isScrolled
-          ? 'bg-white/95 backdrop-blur-md border-b border-slate-200 py-0.5 shadow-sm'
-          : 'bg-white/90 backdrop-blur-sm py-1'
+          ? 'bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-sm'
+          : 'bg-white/90 backdrop-blur-sm'
       }`}
     >
       <div className="max-w-[1440px] mx-auto pl-0.5 pr-3 sm:px-6 lg:px-8 flex items-center justify-between">
@@ -68,12 +68,12 @@ export const Navbar: React.FC = () => {
                 to={link.path}
                 onClick={(e) => handleNavClick(e, link.targetId)}
                 className={`text-[12px] font-sans tracking-[0.14em] uppercase transition-colors relative py-1 font-semibold ${
-                  isActive ? 'text-[#0B2545]' : 'text-slate-600 hover:text-[#0B2545]'
+                  isActive ? 'text-[#002D62]' : 'text-slate-600 hover:text-[#0072CE]'
                 }`}
               >
                 {link.name}
                 {isActive && (
-                  <span className="absolute -bottom-1 left-0 right-0 h-[2px] bg-[#0B2545] rounded-full" />
+                  <span className="absolute -bottom-1 left-0 right-0 h-[2px] bg-gradient-to-r from-[#002D62] to-[#0072CE] rounded-full" />
                 )}
               </Link>
             );
@@ -84,7 +84,7 @@ export const Navbar: React.FC = () => {
         <div className="hidden lg:flex items-center">
           <button
             onClick={() => openConsultationModal()}
-            className="inline-flex items-center gap-2 bg-[#0B2545] hover:bg-[#133E70] text-white text-[12px] font-sans font-bold tracking-[0.14em] uppercase px-5 py-2.5 rounded-sm transition-all duration-200 shadow-md shadow-slate-900/10 cursor-pointer group"
+            className="inline-flex items-center gap-2 bg-gradient-to-r from-[#002D62] to-[#0072CE] hover:from-[#00224D] hover:to-[#0284C7] text-white text-[12px] font-sans font-bold tracking-[0.14em] uppercase px-6 py-3.5 rounded-sm transition-all duration-300 shadow-md shadow-[#002D62]/20 hover:shadow-lg hover:shadow-sky-500/20 cursor-pointer group"
           >
             <span>START A PROJECT</span>
             <ArrowRight className="w-3.5 h-3.5 transition-transform duration-200 group-hover:translate-x-1" />
@@ -95,13 +95,13 @@ export const Navbar: React.FC = () => {
         <div className="flex items-center gap-3 lg:hidden">
           <button
             onClick={() => openConsultationModal()}
-            className="text-[11px] font-bold tracking-wider uppercase bg-[#0B2545] text-white px-3.5 py-2 rounded-sm"
+            className="text-[11px] font-bold tracking-wider uppercase bg-gradient-to-r from-[#002D62] to-[#0072CE] text-white px-3.5 py-2 rounded-sm shadow-sm"
           >
             Inquire
           </button>
           <button
             onClick={toggleMobileMenu}
-            className="p-2 text-slate-700 hover:text-[#0B2545] bg-slate-100 hover:bg-slate-200 rounded-sm focus:outline-none cursor-pointer"
+            className="p-2 text-slate-700 hover:text-[#0072CE] bg-slate-100 hover:bg-slate-200 rounded-sm focus:outline-none cursor-pointer"
             aria-label="Toggle menu"
           >
             {isMobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}

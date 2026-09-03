@@ -28,12 +28,12 @@ export const Button: React.FC<ButtonProps> = ({
   };
 
   const variantStyles = {
-    primary: "bg-[#0284C7] hover:bg-[#0EA5E9] text-white active:scale-[0.99] shadow-md shadow-[#0284C7]/25 font-bold border border-[#38BDF8]/40 hover:shadow-[#0EA5E9]/40",
-    secondary: "bg-[#0F1C31] text-[#F0F9FF] hover:bg-[#152642] border border-[#0EA5E9]/25 hover:border-[#0EA5E9]/60 active:scale-[0.99]",
-    outline: "bg-transparent text-[#38BDF8] border border-[#0EA5E9]/50 hover:border-[#38BDF8] hover:text-white hover:bg-[#0EA5E9]/15 active:scale-[0.99]",
-    ghost: "bg-transparent text-[#E2E8F0] hover:text-[#38BDF8] p-0 hover:bg-transparent tracking-widest uppercase text-xs",
-    bronze: "bg-[#0A1322] text-[#38BDF8] border border-[#0EA5E9]/30 hover:border-[#38BDF8] hover:bg-[#0EA5E9]/10",
-    navy: "bg-[#0B2545] text-white hover:bg-[#134B70] border border-[#0EA5E9]/30"
+    primary: "bg-gradient-to-r from-[#002D62] to-[#0072CE] hover:from-[#00224D] hover:to-[#0284C7] text-white active:scale-[0.99] shadow-md shadow-[#002D62]/25 font-bold border border-[#38BDF8]/40 hover:shadow-lg hover:shadow-sky-500/30",
+    secondary: "bg-[#00224D] text-[#F0F9FF] hover:bg-[#002D62] border border-[#0072CE]/30 hover:border-[#38BDF8]/60 active:scale-[0.99]",
+    outline: "bg-transparent text-[#0072CE] border border-[#0072CE]/50 hover:border-[#002D62] hover:text-white hover:bg-gradient-to-r hover:from-[#002D62] hover:to-[#0072CE] active:scale-[0.99]",
+    ghost: "bg-transparent text-slate-700 hover:text-[#0072CE] p-0 hover:bg-transparent tracking-widest uppercase text-xs",
+    bronze: "bg-[#021226] text-[#38BDF8] border border-[#0072CE]/30 hover:border-[#38BDF8] hover:bg-[#0072CE]/10",
+    navy: "bg-[#002D62] text-white hover:bg-[#00224D] border border-[#0072CE]/30 shadow-md"
   };
 
   return (

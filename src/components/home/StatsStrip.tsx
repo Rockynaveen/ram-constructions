@@ -35,7 +35,7 @@ export const StatsStrip: React.FC = () => {
   ];
 
   return (
-    <section className="py-10 sm:py-12 text-white border-t border-b border-slate-800 relative overflow-hidden bg-slate-950">
+    <section className="py-10 text-white border-t border-b border-slate-800 relative overflow-hidden bg-slate-950">
       {/* Background Architectural Image */}
       <div className="absolute inset-0 z-0">
         <img
@@ -77,7 +77,7 @@ export const StatsStrip: React.FC = () => {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 text-center divide-y md:divide-y-0 md:divide-x divide-white/20 py-4">
           {stats.map((stat, idx) => (
             <div key={idx} className="pt-4 md:pt-0 md:px-4 flex flex-col items-center justify-center">
-              <div className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#38BDF8] tracking-tight drop-shadow-md">
+              <div className="text-3xl sm:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-white via-[#38BDF8] to-[#0072CE] bg-clip-text text-transparent tracking-tight drop-shadow-md">
                 <AnimatedCounter
                   value={stat.value}
                   suffix={stat.suffix}

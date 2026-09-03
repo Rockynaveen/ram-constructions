@@ -65,11 +65,11 @@ export const WhyChooseUs: React.FC = () => {
   ];
 
   return (
-    <section className="py-16 sm:py-24 bg-[#F8FAFC]/60 border-t border-slate-200 relative overflow-hidden">
+    <section className="py-10 bg-[#F8FAFC] border-t border-slate-200 relative overflow-hidden">
       <div className="max-w-[1440px] mx-auto px-6 sm:px-10 lg:px-14">
         
         {/* Section Header */}
-        <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-14">
+        <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-10">
           <SectionHeading
             eyebrow="The RAM Constructions Difference"
             title="Built on eight non-negotiable"
@@ -78,15 +78,15 @@ export const WhyChooseUs: React.FC = () => {
           />
         </div>
 
-        {/* Hover Corner Accent Line Framed Card Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 lg:gap-10 items-stretch">
+        {/* Modern Shadcn Card Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 lg:gap-6 items-stretch">
           {principles.map((item, index) => (
             <motion.div
               key={item.num}
-              initial={{ opacity: 0, y: 24 }}
+              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-40px" }}
-              transition={{ duration: 0.5, delay: (index % 4) * 0.1 }}
+              transition={{ duration: 0.4, delay: (index % 4) * 0.08 }}
               className="h-full"
             >
               <WhyChooseUsCard item={item} />

@@ -1,13 +1,12 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
 import { SectionHeading } from '../ui/SectionHeading';
 import { Button } from '../ui/Button';
 import { Check } from 'lucide-react';
 
 export const AboutSplit: React.FC = () => {
   return (
-    <section className="min-h-screen lg:h-screen lg:max-h-screen flex items-center bg-white relative overflow-hidden py-8 lg:py-0">
+    <section className="py-10 bg-white relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10 items-center">
           
@@ -91,11 +90,20 @@ export const AboutSplit: React.FC = () => {
             </div>
 
             <div className="pt-1">
-              <Link to="/about">
-                <Button variant="primary" size="md" icon="arrow-right">
-                  Discover Our Lineage & Philosophy
-                </Button>
-              </Link>
+              <Button 
+                variant="primary" 
+                size="md" 
+                icon="arrow-right"
+                onClick={() => {
+                  const elem = document.getElementById('services');
+                  if (elem) {
+                    elem.scrollIntoView({ behavior: 'smooth' });
+                    window.history.replaceState(null, '', '#services');
+                  }
+                }}
+              >
+                Discover Our Disciplines & Craft
+              </Button>
             </div>
           </div>
 

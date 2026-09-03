@@ -1,120 +1,77 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
 import { useAppStore } from '../../store/useStore';
-import { ArrowRight, ChevronLeft, ChevronRight } from 'lucide-react';
-
-const heroSlides = [
-  {
-    id: 1,
-    image: '/images/hero-site.jpg',
-    title: 'Precision Civil & Structural Engineering',
-    alt: 'RAM Constructions Active Commercial Development Site'
-  },
-  {
-    id: 2,
-    image: '/images/hero-site-2.jpg',
-    title: 'Large-Scale Institutional & Landmark Infrastructure',
-    alt: 'RAM Constructions Dual Towers Concrete Infrastructure with Cranes'
-  },
-  {
-    id: 3,
-    image: '/images/hero-site-3.jpg',
-    title: 'Master Engineers & On-Site Quality Leadership',
-    alt: 'RAM Constructions Site Engineers & Project Leadership on Active High-Rise Site'
-  }
-];
+import { ArrowRight, ShieldCheck, Award, Sparkles } from 'lucide-react';
 
 export const Hero: React.FC = () => {
-  const [currentSlide, setCurrentSlide] = useState(0);
   const { openConsultationModal } = useAppStore();
 
-  const nextSlide = useCallback(() => {
-    setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
-  }, []);
-
-  const prevSlide = useCallback(() => {
-    setCurrentSlide((prev) => (prev - 1 + heroSlides.length) % heroSlides.length);
-  }, []);
-
-  useEffect(() => {
-    const timer = setInterval(() => {
-      nextSlide();
-    }, 3500);
-    return () => clearInterval(timer);
-  }, [nextSlide]);
-
   return (
-    <section className="relative h-screen min-h-screen flex flex-col justify-between pt-24 pb-8 sm:pb-10 overflow-hidden bg-slate-950">
-      {/* Background Hero Carousel Images with Cinematic Overlapping Ken-Burns Animation */}
+    <section className="relative min-h-[92vh] lg:min-h-screen flex items-center pt-24 pb-12 sm:pb-16 overflow-hidden bg-[#021226]">
+      {/* 1. Single Premium Architectural Hero Image with Light Transparent Overlay */}
       <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
-        {heroSlides.map((slide, index) => {
-          const isActive = currentSlide === index;
-          return (
-            <motion.div
-              key={slide.id}
-              initial={false}
-              animate={{
-                opacity: isActive ? 1 : 0,
-                scale: isActive ? 1.06 : 1.0,
-                x: isActive ? '0%' : '2%'
-              }}
-              transition={{
-                opacity: { duration: 1.2, ease: 'easeInOut' },
-                scale: { duration: 4.5, ease: 'easeOut' },
-                x: { duration: 1.4, ease: [0.16, 1, 0.3, 1] }
-              }}
-              className="absolute inset-0 w-full h-full"
-            >
-              <img
-                src={slide.image}
-                alt={slide.alt}
-                className="w-full h-full object-cover object-center"
-              />
-            </motion.div>
-          );
-        })}
+        <motion.div
+          initial={{ scale: 1.05 }}
+          animate={{ scale: 1.0 }}
+          transition={{ duration: 3.5, ease: [0.16, 1, 0.3, 1] }}
+          className="w-full h-full"
+        >
+          <img
+            src="/images/hero-aura-tower.jpg"
+            alt="RAM Construction Landmark Tower Infrastructure"
+            className="w-full h-full object-cover object-center filter brightness-[1.02] contrast-[1.04]"
+          />
+        </motion.div>
 
-        {/* Lite transparent black overlay */}
-        <div className="absolute inset-0 bg-black/40 pointer-events-none" />
-        
-        {/* Soft directional gradient for optimal text readability */}
-        <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-transparent w-full lg:w-[65%] pointer-events-none" />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none" />
+        {/* Black transparent overlays for enhanced depth and rich text contrast */}
+        <div className="absolute inset-0 bg-black/45 pointer-events-none" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/55 to-transparent w-full lg:w-[70%] pointer-events-none" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent pointer-events-none" />
+
+        {/* Ambient Subtle Architectural Grid */}
+        <div 
+          className="absolute inset-0 opacity-10 pointer-events-none" 
+          style={{
+            backgroundImage: `linear-gradient(to right, rgba(56, 189, 248, 0.15) 1px, transparent 1px), linear-gradient(to bottom, rgba(56, 189, 248, 0.15) 1px, transparent 1px)`,
+            backgroundSize: '48px 48px'
+          }}
+        />
       </div>
 
-      {/* Main Hero Container */}
-      <div className="relative z-10 max-w-[1440px] mx-auto px-6 sm:px-10 lg:px-14 w-full py-8 lg:py-16">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center w-full">
+      {/* 2. Main Hero Content Container */}
+      <div className="relative z-10 max-w-[1440px] mx-auto px-6 sm:px-10 lg:px-14 w-full">
+        <div className="max-w-3xl">
           
-          {/* Left Column: Direct Text & Actions */}
+          {/* Editorial & Actions */}
           <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            animate={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 25 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-            className="lg:col-span-8 xl:col-span-7 space-y-6 lg:space-y-8"
+            className="space-y-6 sm:space-y-8"
           >
-            {/* Top Eyebrow */}
-            <div className="flex items-center gap-2.5">
-              <span className="w-2.5 h-2.5 rounded-full bg-[#38BDF8] animate-pulse" />
-              <span className="text-[12px] sm:text-[13px] font-sans font-bold tracking-[0.22em] text-[#38BDF8] uppercase drop-shadow">
-                BUILT ON TRUST. DRIVEN BY DESIGN.
+            {/* Prestige Eyebrow Badge */}
+            <div className="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-[#00224D]/80 backdrop-blur-md border border-[#38BDF8]/40 shadow-lg shadow-sky-950/30">
+              <span className="w-2 h-2 rounded-full bg-[#38BDF8] animate-pulse" />
+              <span className="text-[11px] sm:text-xs font-mono font-bold tracking-[0.2em] text-[#38BDF8] uppercase">
+                PREMIER CIVIL & ARCHITECTURAL ENGINEERING
               </span>
             </div>
 
             {/* Main Headline */}
             <div>
-              <h1 className="font-serif text-4xl sm:text-5xl lg:text-[3.6rem] xl:text-[4rem] font-bold text-white leading-[1.1] tracking-tight drop-shadow-md">
+              <h1 className="font-sans text-4xl sm:text-5xl lg:text-[3.75rem] xl:text-[4.25rem] font-bold text-white leading-[1.08] tracking-tight drop-shadow-lg">
                 Building More Than <br />
-                Structures – <br />
-                <span className="text-[#38BDF8]">Building Better Lives.</span>
+                Structures — <br />
+                <span className="bg-gradient-to-r from-white via-[#7DD3FC] to-[#0072CE] bg-clip-text text-transparent">
+                  Engineering Legacies.
+                </span>
               </h1>
-              <div className="w-12 h-[3px] bg-[#38BDF8] rounded-full my-5" />
+              <div className="w-16 h-1 bg-gradient-to-r from-[#38BDF8] to-[#0072CE] rounded-full mt-5" />
             </div>
 
-            {/* Paragraph */}
-            <p className="text-base sm:text-lg font-medium text-slate-100 max-w-xl leading-relaxed drop-shadow">
-              We partner with you at every step to bring your dream space to life with clarity, precision engineering and turnkey master craftsmanship.
+            {/* Subtitle / Paragraph */}
+            <p className="text-base sm:text-lg font-normal text-slate-200 max-w-2xl leading-relaxed drop-shadow">
+              We partner with visionary homeowners and enterprises to execute bespoke residences and landmark spaces with mathematical precision, zero subcontracting, and turnkey mastery.
             </p>
 
             {/* Action Buttons */}
@@ -122,63 +79,44 @@ export const Hero: React.FC = () => {
               {/* Primary Button */}
               <button
                 onClick={() => openConsultationModal()}
-                className="inline-flex items-center justify-center gap-2.5 bg-[#0284C7] hover:bg-[#0369A1] text-white text-xs sm:text-[13px] font-sans font-bold tracking-[0.14em] uppercase px-8 py-4 rounded-sm transition-all duration-300 shadow-xl shadow-sky-950/40 cursor-pointer group"
+                className="inline-flex items-center justify-center gap-2.5 bg-gradient-to-r from-[#002D62] via-[#0072CE] to-[#0284C7] hover:brightness-110 text-white text-xs sm:text-[13px] font-sans font-bold tracking-[0.14em] uppercase px-8 py-4 rounded-sm transition-all duration-300 shadow-xl shadow-sky-950/50 hover:shadow-sky-500/25 hover:scale-[1.02] cursor-pointer group"
               >
                 <span>START YOUR PROJECT</span>
                 <ArrowRight className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-1" />
               </button>
 
               {/* Secondary Button */}
-              <Link to="/#projects">
-                <button
-                  className="w-full sm:w-auto inline-flex items-center justify-center bg-white/10 hover:bg-white/20 backdrop-blur-md text-white border-2 border-white/50 hover:border-white text-xs sm:text-[13px] font-sans font-bold tracking-[0.14em] uppercase px-8 py-3.5 rounded-sm transition-all duration-200 cursor-pointer shadow-sm"
-                >
-                  EXPLORE OUR WORK
-                </button>
-              </Link>
+              <button
+                onClick={() => {
+                  const elem = document.getElementById('projects');
+                  if (elem) {
+                    elem.scrollIntoView({ behavior: 'smooth' });
+                    window.history.replaceState(null, '', '#projects');
+                  }
+                }}
+                className="w-full sm:w-auto inline-flex items-center justify-center bg-white/10 hover:bg-white/20 backdrop-blur-md text-white border border-white/40 hover:border-white text-xs sm:text-[13px] font-sans font-bold tracking-[0.14em] uppercase px-8 py-3.5 rounded-sm transition-all duration-200 cursor-pointer shadow-md"
+              >
+                EXPLORE PORTFOLIO
+              </button>
+            </div>
+
+            {/* Key Trust Micro-Badges */}
+            <div className="pt-4 grid grid-cols-2 sm:grid-cols-3 gap-3 border-t border-white/15 max-w-2xl">
+              <div className="flex items-center gap-2 text-slate-200 text-xs font-mono">
+                <ShieldCheck className="w-4 h-4 text-[#38BDF8] shrink-0" />
+                <span>10-Yr Structural Warranty</span>
+              </div>
+              <div className="flex items-center gap-2 text-slate-200 text-xs font-mono">
+                <Award className="w-4 h-4 text-[#38BDF8] shrink-0" />
+                <span>100% Fixed Cost Guarantee</span>
+              </div>
+              <div className="flex items-center gap-2 text-slate-200 text-xs font-mono col-span-2 sm:col-span-1">
+                <Sparkles className="w-4 h-4 text-[#38BDF8] shrink-0" />
+                <span>In-House Master Trades</span>
+              </div>
             </div>
           </motion.div>
 
-        </div>
-      </div>
-
-      {/* Hero Carousel Navigation Controls & Indicators */}
-      <div className="relative z-20 max-w-[1440px] mx-auto px-6 sm:px-10 lg:px-14 w-full flex items-center justify-between pt-4">
-        {/* Slide Indicators */}
-        <div className="flex items-center gap-3">
-          {heroSlides.map((slide, idx) => (
-            <button
-              key={slide.id}
-              onClick={() => setCurrentSlide(idx)}
-              className={`h-2 rounded-full transition-all duration-500 cursor-pointer ${
-                currentSlide === idx
-                  ? 'w-10 bg-[#38BDF8] shadow-lg shadow-sky-400/50'
-                  : 'w-2 bg-white/40 hover:bg-white/70'
-              }`}
-              aria-label={`Go to slide ${idx + 1}`}
-            />
-          ))}
-          <span className="text-xs font-mono text-slate-300 ml-2 font-bold tracking-wider">
-            0{currentSlide + 1} / 0{heroSlides.length}
-          </span>
-        </div>
-
-        {/* Prev / Next Controls */}
-        <div className="flex items-center gap-2">
-          <button
-            onClick={prevSlide}
-            className="w-10 h-10 rounded-full bg-black/40 hover:bg-black/70 backdrop-blur-md text-white border border-white/20 hover:border-white/50 flex items-center justify-center transition-all cursor-pointer shadow-md"
-            aria-label="Previous slide"
-          >
-            <ChevronLeft className="w-5 h-5" />
-          </button>
-          <button
-            onClick={nextSlide}
-            className="w-10 h-10 rounded-full bg-black/40 hover:bg-black/70 backdrop-blur-md text-white border border-white/20 hover:border-white/50 flex items-center justify-center transition-all cursor-pointer shadow-md"
-            aria-label="Next slide"
-          >
-            <ChevronRight className="w-5 h-5" />
-          </button>
         </div>
       </div>
     </section>

@@ -6,14 +6,14 @@
   --font-sans: "Roboto", sans-serif;
   --font-mono: "Roboto", sans-serif;
 
-  /* RAM Construction Crisp Light Theme: Deep Navy & Electric Cerulean/Sky Blue */
-  --color-brand-navy-950: #050E1C;
-  --color-brand-navy-900: #0A192F;
-  --color-brand-navy-800: #0B2545;
-  --color-brand-navy-700: #133E70;
+  /* RAM Construction Official Logo Theme: Deep Navy (#002D62), Electric Cerulean (#0072CE / #0284C7), Sky Cyan (#38BDF8) */
+  --color-brand-navy-950: #021226;
+  --color-brand-navy-900: #00224D;
+  --color-brand-navy-800: #002D62;
+  --color-brand-navy-700: #0B3C78;
 
-  --color-brand-blue-600: #0284C7;
-  --color-brand-blue-500: #0EA5E9;
+  --color-brand-blue-600: #0072CE;
+  --color-brand-blue-500: #0284C7;
   --color-brand-blue-400: #38BDF8;
   --color-brand-blue-100: #E0F2FE;
   --color-brand-blue-50: #F0F9FF;
@@ -96,15 +96,27 @@
 
 .text-gold-gradient,
 .text-brand-gradient {
-  background: linear-gradient(135deg, #0B2545 0%, #0284C7 60%, #0EA5E9 100%);
+  background: linear-gradient(135deg, #002D62 0%, #0072CE 55%, #38BDF8 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .text-blue-gradient {
-  background: linear-gradient(135deg, #0284C7 0%, #0369A1 100%);
+  background: linear-gradient(135deg, #0072CE 0%, #38BDF8 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+.bg-brand-gradient {
+  background: linear-gradient(135deg, #002D62 0%, #0072CE 100%);
+}
+
+.bg-brand-gradient-hover:hover {
+  background: linear-gradient(135deg, #00224D 0%, #0284C7 100%);
+}
+
+.bg-brand-gradient-light {
+  background: linear-gradient(135deg, rgba(0, 45, 98, 0.05) 0%, rgba(0, 114, 206, 0.1) 100%);
 }
 
 .glass-panel {

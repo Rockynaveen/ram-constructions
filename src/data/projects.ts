@@ -13,12 +13,12 @@ export const projectsData: Project[] = [
     area: '9,200 sq.ft',
     duration: '16 Months',
     budgetRange: '₹4.8 Cr - ₹5.4 Cr',
-    coverImage: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1600&q=80',
-    heroImage: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=2000&q=85',
+    coverImage: '/images/ongoing-villa-construction.jpg',
+    heroImage: '/images/ongoing-villa-construction.jpg',
     gallery: [
       {
-        url: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=80',
-        caption: 'External architectural massing featuring cantilevered exposed concrete and bronze louvers.',
+        url: '/images/ongoing-villa-construction.jpg',
+        caption: 'Active structural casting with reinforced cantilever slabs, formwork, and on-site engineers.',
         aspectRatio: 'wide'
       },
       {
@@ -29,16 +29,6 @@ export const projectsData: Project[] = [
       {
         url: 'https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?auto=format&fit=crop&w=1200&q=80',
         caption: 'Living pavilion opening completely to the lush tropical garden via motorized pocket doors.',
-        aspectRatio: 'wide'
-      },
-      {
-        url: 'https://images.unsplash.com/photo-1600573472591-ee6b68d14c68?auto=format&fit=crop&w=1200&q=80',
-        caption: 'Custom monolithic dining counter with raw edge walnut and recessed architectural strip lighting.',
-        aspectRatio: 'tall'
-      },
-      {
-        url: 'https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1600&q=80',
-        caption: 'Master suite terrace featuring seamless glass balustrade and micro-cement flooring.',
         aspectRatio: 'wide'
       }
     ],
@@ -83,23 +73,18 @@ export const projectsData: Project[] = [
     area: '11,800 sq.ft',
     duration: '18 Months',
     budgetRange: '₹6.2 Cr - ₹7.1 Cr',
-    coverImage: 'https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=1600&q=80',
-    heroImage: 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=2000&q=85',
+    coverImage: '/images/hero-villa.jpg',
+    heroImage: '/images/hero-villa.jpg',
     gallery: [
       {
-        url: 'https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=1600&q=80',
-        caption: 'Overhanging cantilever roof providing deep solar shading to floor-to-ceiling glass facades.',
+        url: '/images/hero-villa.jpg',
+        caption: 'Pristine completed residential villa featuring swimming pool with modern cascade waterfall.',
         aspectRatio: 'wide'
       },
       {
         url: 'https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1200&q=80',
         caption: 'Frameless glass corner in the formal pavilion with views across the lake horizon.',
         aspectRatio: 'tall'
-      },
-      {
-        url: 'https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=1600&q=80',
-        caption: 'Custom infinity pool tiled in Sukabumi volcanic stone with sunken fire pit.',
-        aspectRatio: 'wide'
       }
     ],
     overview: 'Constructed atop a sloping granite boulder outcrop overlooking the lake, this residence utilizes structural steel framing to hover lightly over the preserved natural landscape.',
@@ -139,18 +124,13 @@ export const projectsData: Project[] = [
     area: '7,600 sq.ft',
     duration: '14 Months',
     budgetRange: '₹4.2 Cr - ₹4.8 Cr',
-    coverImage: 'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1600&q=80',
-    heroImage: 'https://images.unsplash.com/photo-1600585152220-90363fe7e115?auto=format&fit=crop&w=2000&q=85',
+    coverImage: '/images/hero-site-2.jpg',
+    heroImage: '/images/hero-site-2.jpg',
     gallery: [
       {
-        url: 'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1600&q=80',
-        caption: 'Warm pigmented earth facade with custom geometric terracotta jaali screens.',
+        url: '/images/hero-site-2.jpg',
+        caption: 'Ongoing structural engineering framework with heavy equipment and dual tower cranes on site.',
         aspectRatio: 'wide'
-      },
-      {
-        url: 'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1200&q=80',
-        caption: 'Sculptural curved helical staircase cast in continuous white terrazzo.',
-        aspectRatio: 'tall'
       }
     ],
     overview: 'A bold, monolithic urban home that uses deep earthy tones and patterned shadow play to establish calm and privacy in the center of the city.',
@@ -182,12 +162,12 @@ export const projectsData: Project[] = [
     area: '6,800 sq.ft',
     duration: '13 Months',
     budgetRange: '₹3.6 Cr - ₹4.1 Cr',
-    coverImage: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1600&q=80',
+    coverImage: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=80',
     heroImage: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=2000&q=85',
     gallery: [
       {
-        url: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1600&q=80',
-        caption: 'Zen gravel garden framed by blackened cedar Shou Sugi Ban screens.',
+        url: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=80',
+        caption: 'Completed luxury residence with warm ambient landscape illumination.',
         aspectRatio: 'wide'
       }
     ],
@@ -205,7 +185,7 @@ export const projectsData: Project[] = [
     specifications: [
       { label: 'Ventilation', value: 'Heat Recovery Ventilation (HRV) System' }
     ],
-    featured: false
+    featured: true
   },
   {
     id: 'slate-oak-penthouse',
@@ -219,12 +199,12 @@ export const projectsData: Project[] = [
     area: '5,400 sq.ft',
     duration: '9 Months',
     budgetRange: '₹2.9 Cr - ₹3.4 Cr',
-    coverImage: 'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1600&q=80',
-    heroImage: 'https://images.unsplash.com/photo-1600607687644-c7171b42498f?auto=format&fit=crop&w=2000&q=85',
+    coverImage: '/images/ongoing-penthouse-interior.jpg',
+    heroImage: '/images/ongoing-penthouse-interior.jpg',
     gallery: [
       {
-        url: 'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1600&q=80',
-        caption: 'Dark slate fireplace wall with integrated concealed audio and ambient lighting.',
+        url: '/images/ongoing-penthouse-interior.jpg',
+        caption: 'Active interior fitout and master joinery installation overlooking the metropolitan skyline.',
         aspectRatio: 'wide'
       }
     ],
@@ -256,17 +236,17 @@ export const projectsData: Project[] = [
     area: '240,000 sq.ft',
     duration: '22 Months',
     budgetRange: '₹42 Cr - ₹48 Cr',
-    coverImage: '/images/ram-towers-landmark.jpg',
-    heroImage: '/images/ram-towers-landmark.jpg',
+    coverImage: '/images/hero-site.jpg',
+    heroImage: '/images/hero-site.jpg',
     gallery: [
       {
-        url: '/images/ram-towers-landmark.jpg',
-        caption: 'Signature architectural towers overlooking landscaped water features and pedestrian plazas.',
+        url: '/images/hero-site.jpg',
+        caption: 'Signature ongoing commercial towers with active tower cranes and post-tensioned RCC casting at golden hour.',
         aspectRatio: 'wide'
       },
       {
-        url: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1600&q=80',
-        caption: 'Triple-glazed thermal facade providing passive solar shading to multi-tenant corporate floors.',
+        url: '/images/hero-site-3.jpg',
+        caption: 'Resident structural engineering directors conducting blueprint quality checks on active site.',
         aspectRatio: 'wide'
       }
     ],
@@ -302,12 +282,12 @@ export const projectsData: Project[] = [
     area: '8,100 sq.ft',
     duration: '15 Months',
     budgetRange: '₹3.9 Cr - ₹4.4 Cr',
-    coverImage: 'https://images.unsplash.com/photo-1580587771525-78b9dba3b914?auto=format&fit=crop&w=1600&q=80',
-    heroImage: 'https://images.unsplash.com/photo-1580587771525-78b9dba3b914?auto=format&fit=crop&w=2000&q=85',
+    coverImage: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1600&q=80',
+    heroImage: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=2000&q=85',
     gallery: [
       {
-        url: 'https://images.unsplash.com/photo-1580587771525-78b9dba3b914?auto=format&fit=crop&w=1600&q=80',
-        caption: 'Restored colonial veranda with lime plaster moldings and antique brass hardware.',
+        url: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1600&q=80',
+        caption: 'Restored grand colonial estate with manicured exterior grounds and finished portico.',
         aspectRatio: 'wide'
       }
     ],
@@ -325,7 +305,7 @@ export const projectsData: Project[] = [
     specifications: [
       { label: 'Structural Reinforcement', value: 'Sika Carbon Fiber Wrap & Micro-piling' }
     ],
-    featured: false
+    featured: true
   },
   {
     id: 'horizon-sky-villa',
@@ -345,11 +325,6 @@ export const projectsData: Project[] = [
       {
         url: '/images/ram-skyline-estate.jpg',
         caption: 'Aerial panoramic perspective of the cantilevered multi-level estate, infinity pool, and city skyline.',
-        aspectRatio: 'wide'
-      },
-      {
-        url: 'https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=1600&q=80',
-        caption: 'Hillside cantilever deck featuring custom glass floor section overlooking valley.',
         aspectRatio: 'wide'
       }
     ],

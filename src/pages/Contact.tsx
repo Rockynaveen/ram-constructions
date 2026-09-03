@@ -7,7 +7,7 @@ export const Contact: React.FC = () => {
   return (
     <div className="min-h-screen bg-white pt-24 pb-16">
       {/* Header */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 lg:py-12 border-b border-slate-100">
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 border-b border-slate-100">
         <div className="max-w-3xl">
           <div className="inline-flex items-center gap-2.5 px-3.5 py-1 rounded-full bg-sky-50 border border-sky-200 mb-4">
             <span className="w-2 h-2 rounded-full bg-[#0284C7] animate-pulse" />
@@ -28,7 +28,7 @@ export const Contact: React.FC = () => {
       </section>
 
       {/* Main Grid: Addresses on Left, Form on Right */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 lg:py-14">
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
           
           {/* Left Column: Studio Locations & Direct Contacts (Col 5) */}

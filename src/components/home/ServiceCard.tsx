@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { useAppStore } from '../../store/useStore';
 import { 
   Home, 
   Building2, 
@@ -37,6 +37,7 @@ const renderServiceIcon = (name: string, className: string = "w-5 h-5") => {
 };
 
 export const ServiceCard: React.FC<ServiceCardProps> = ({ service }) => {
+  const { openConsultationModal } = useAppStore();
   const [isFlipped, setIsFlipped] = useState(false);
 
   const handleCardClick = () => {
@@ -143,14 +144,17 @@ export const ServiceCard: React.FC<ServiceCardProps> = ({ service }) => {
 
           {/* Bottom Row: CTA Button */}
           <div className="relative z-10 pt-3 border-t border-slate-700/60">
-            <Link
-              to={`/services/${service.slug}`}
-              onClick={(e) => e.stopPropagation()}
-              className="inline-flex items-center justify-between w-full px-4 py-2.5 rounded-lg bg-[#0284C7] hover:bg-[#0EA5E9] active:bg-[#0284C7] text-white text-xs font-mono font-bold tracking-wider uppercase transition-all duration-300 shadow-md shadow-[#0284C7]/30 hover:shadow-[#0EA5E9]/40 group/btn"
+            <button
+              type="button"
+              onClick={(e) => {
+                e.stopPropagation();
+                openConsultationModal(`Inquiry: ${service.title}`);
+              }}
+              className="inline-flex items-center justify-between w-full px-4 py-2.5 rounded-lg bg-[#0284C7] hover:bg-[#0EA5E9] active:bg-[#0284C7] text-white text-xs font-mono font-bold tracking-wider uppercase transition-all duration-300 shadow-md shadow-[#0284C7]/30 hover:shadow-[#0EA5E9]/40 group/btn cursor-pointer"
             >
-              <span>Explore</span>
+              <span>Inquire Discipline</span>
               <ArrowUpRight className="w-4 h-4 transition-transform duration-300 group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5" />
-            </Link>
+            </button>
           </div>
         </div>
       </div>

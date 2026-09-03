@@ -30,8 +30,8 @@ export const SectionHeading: React.FC<SectionHeadingProps> = ({
     ? 'text-right items-end ml-auto' 
     : 'text-left items-start';
 
-  const eyebrowColor = theme === 'dark' ? 'text-[#38BDF8]' : 'text-[#0284C7]';
-  const titleColor = theme === 'dark' ? 'text-white' : 'text-[#0B2545]';
+  const eyebrowColor = theme === 'dark' ? 'text-[#38BDF8]' : 'text-[#0072CE]';
+  const titleColor = theme === 'dark' ? 'text-white' : 'text-[#002D62]';
   const descColor = theme === 'dark' ? 'text-slate-300' : 'text-slate-600';
 
   return (
@@ -44,11 +44,11 @@ export const SectionHeading: React.FC<SectionHeadingProps> = ({
           transition={{ duration: 0.6 }}
           className="flex items-center gap-3 mb-3"
         >
-          <span className="w-6 h-[2px] bg-[#0284C7]" />
+          <span className="w-6 h-[2px] bg-gradient-to-r from-[#002D62] to-[#0072CE]" />
           <span className={cn("text-[11px] font-mono font-bold tracking-[0.25em] uppercase", eyebrowColor)}>
             {eyebrow}
           </span>
-          {isCenter && <span className="w-6 h-[2px] bg-[#0284C7]" />}
+          {isCenter && <span className="w-6 h-[2px] bg-gradient-to-r from-[#0072CE] to-[#002D62]" />}
         </motion.div>
       )}
 
@@ -64,7 +64,7 @@ export const SectionHeading: React.FC<SectionHeadingProps> = ({
       >
         {title}{' '}
         {titleHighlight && (
-          <span className="font-bold text-[#0284C7]">
+          <span className="font-bold bg-gradient-to-r from-[#002D62] via-[#0072CE] to-[#38BDF8] bg-clip-text text-transparent">
             {titleHighlight}
           </span>
         )}

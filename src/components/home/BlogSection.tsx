@@ -9,7 +9,7 @@ export const BlogSection: React.FC = () => {
   const featuredArticles = articlesData.slice(0, 4);
 
   return (
-    <section className="py-10 sm:py-14 bg-[#F8FAFC] border-t border-slate-200 relative overflow-hidden">
+    <section className="py-10 bg-[#F8FAFC] border-t border-slate-200 relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header */}

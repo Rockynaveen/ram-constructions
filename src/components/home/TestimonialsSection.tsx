@@ -17,7 +17,7 @@ export const TestimonialsSection: React.FC = () => {
   };
 
   return (
-    <section className="py-10 sm:py-12 bg-white text-[#0B2545] relative overflow-hidden border-t border-slate-200">
+    <section className="py-10 bg-white text-[#0B2545] relative overflow-hidden border-t border-slate-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}

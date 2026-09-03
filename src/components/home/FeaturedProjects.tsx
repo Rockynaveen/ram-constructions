@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Link } from 'react-router-dom';
 import { projectsData } from '../../data/projects';
 import { SectionHeading } from '../ui/SectionHeading';
-import { ArrowUpRight, MapPin } from 'lucide-react';
+import { MapPin } from 'lucide-react';
 
 export const FeaturedProjects: React.FC = () => {
   const [activeFilter, setActiveFilter] = useState<'All' | 'Ongoing' | 'Completed'>('All');
@@ -16,7 +15,7 @@ export const FeaturedProjects: React.FC = () => {
   const filterTabs = ['All', 'Ongoing', 'Completed'] as const;
 
   return (
-    <section className="py-16 sm:py-24 bg-[#F8FAFC]/50 border-t border-slate-200 relative overflow-hidden">
+    <section className="py-10 bg-white border-t border-slate-200 relative overflow-hidden">
       <div className="max-w-[1440px] mx-auto px-6 sm:px-10 lg:px-14">
         
         {/* Section Header with Category Filters */}
@@ -30,29 +29,21 @@ export const FeaturedProjects: React.FC = () => {
 
           <div className="flex flex-wrap items-center gap-3 shrink-0">
             {/* Filter Tabs Pills (All / Ongoing / Completed) */}
-            <div className="flex items-center gap-1.5 bg-white p-1.5 rounded-xl border border-slate-200 shadow-sm">
+            <div className="flex items-center gap-1.5 bg-[#F8FAFC] p-1.5 rounded-xl border border-slate-200 shadow-sm">
               {filterTabs.map((tab) => (
                 <button
                   key={tab}
                   onClick={() => setActiveFilter(tab)}
                   className={`px-4 py-2 text-xs font-mono font-bold uppercase tracking-wider rounded-lg transition-all duration-300 cursor-pointer ${
                     activeFilter === tab
-                      ? 'bg-[#0284C7] text-white shadow-md shadow-sky-500/20'
-                      : 'text-slate-600 hover:text-[#0B2545] hover:bg-slate-100'
+                      ? 'bg-gradient-to-r from-[#002D62] to-[#0072CE] text-white shadow-md shadow-[#002D62]/20'
+                      : 'text-slate-600 hover:text-[#0072CE] hover:bg-slate-100'
                   }`}
                 >
                   {tab}
                 </button>
               ))}
             </div>
-
-            <Link
-              to="/projects"
-              className="inline-flex items-center gap-2 text-xs font-mono tracking-widest text-[#0284C7] uppercase hover:text-[#0B2545] transition-colors group font-bold ml-2"
-            >
-              <span>Full Portfolio</span>
-              <ArrowUpRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-            </Link>
           </div>
         </div>
 
@@ -69,10 +60,7 @@ export const FeaturedProjects: React.FC = () => {
             {/* Main Lead Spotlight Project (Col 8) */}
             {featured[0] && (
               <div className="lg:col-span-8 group">
-                <Link
-                  to={`/projects/${featured[0].slug}`}
-                  className="block relative h-full min-h-[460px] sm:min-h-[520px] rounded-2xl overflow-hidden border border-slate-200/90 shadow-lg hover:shadow-2xl transition-all duration-500 bg-[#050E1C]"
-                >
+                <div className="block relative h-full min-h-[460px] sm:min-h-[520px] rounded-2xl overflow-hidden border border-slate-200/90 shadow-lg hover:shadow-xl transition-all duration-500 bg-[#050E1C] text-left">
                   <img
                     src={featured[0].coverImage}
                     alt={featured[0].title}
@@ -108,7 +96,7 @@ export const FeaturedProjects: React.FC = () => {
                       <span>{featured[0].area}</span>
                     </div>
 
-                    <h3 className="font-serif text-2xl sm:text-4xl text-white font-bold group-hover:text-sky-200 transition-colors leading-snug">
+                    <h3 className="font-serif text-2xl sm:text-4xl text-white font-bold transition-colors leading-snug">
                       {featured[0].title}
                     </h3>
 
@@ -120,15 +108,12 @@ export const FeaturedProjects: React.FC = () => {
                       <span className="text-xs font-mono text-[#38BDF8] font-bold">
                         Budget: {featured[0].budgetRange}
                       </span>
-                      <span className="inline-flex items-center gap-2 text-xs font-mono font-bold text-white group-hover:text-[#38BDF8] uppercase tracking-wider transition-colors">
-                        <span>Explore Specs</span>
-                        <div className="w-8 h-8 rounded-full bg-[#0284C7] group-hover:bg-[#0EA5E9] text-white flex items-center justify-center transition-all shadow-md">
-                          <ArrowUpRight className="w-4 h-4" />
-                        </div>
+                      <span className="text-xs font-mono font-bold text-sky-200 uppercase tracking-wider">
+                        Turnkey Landmark
                       </span>
                     </div>
                   </div>
-                </Link>
+                </div>
               </div>
             )}
 
@@ -136,10 +121,7 @@ export const FeaturedProjects: React.FC = () => {
             <div className="lg:col-span-4 flex flex-col gap-6 lg:gap-8">
               {featured.slice(1, 3).map((item) => (
                 <div key={item.id} className="group flex-1">
-                  <Link
-                    to={`/projects/${item.slug}`}
-                    className="block relative h-full min-h-[240px] rounded-2xl overflow-hidden border border-slate-200/90 shadow-md hover:shadow-xl transition-all duration-500 bg-[#050E1C]"
-                  >
+                  <div className="block relative h-full min-h-[240px] rounded-2xl overflow-hidden border border-slate-200/90 shadow-md hover:shadow-lg transition-all duration-500 bg-[#050E1C] text-left">
                     <img
                       src={item.coverImage}
                       alt={item.title}
@@ -167,18 +149,18 @@ export const FeaturedProjects: React.FC = () => {
                         <span>{item.location}</span>
                       </div>
 
-                      <h4 className="font-serif text-lg sm:text-xl font-bold text-white group-hover:text-sky-200 transition-colors leading-snug">
+                      <h4 className="font-serif text-lg sm:text-xl font-bold text-white transition-colors leading-snug">
                         {item.title}
                       </h4>
 
                       <div className="mt-3 pt-2.5 border-t border-white/20 flex items-center justify-between text-[11px] font-mono">
                         <span className="text-slate-300">{item.area}</span>
-                        <span className="text-[#38BDF8] font-bold flex items-center gap-1 group-hover:translate-x-0.5 transition-transform">
-                          View <ArrowUpRight className="w-3.5 h-3.5" />
+                        <span className="text-[#38BDF8] font-bold">
+                          {item.year}
                         </span>
                       </div>
                     </div>
-                  </Link>
+                  </div>
                 </div>
               ))}
             </div>
@@ -186,10 +168,7 @@ export const FeaturedProjects: React.FC = () => {
             {/* Bottom Row of 2 Secondary Featured Projects */}
             {featured.slice(3, 5).map((item) => (
               <div key={item.id} className="lg:col-span-6 group">
-                <Link
-                  to={`/projects/${item.slug}`}
-                  className="block relative rounded-2xl overflow-hidden border border-slate-200/90 shadow-md hover:shadow-xl transition-all duration-500 bg-[#050E1C]"
-                >
+                <div className="block relative rounded-2xl overflow-hidden border border-slate-200/90 shadow-md hover:shadow-lg transition-all duration-500 bg-[#050E1C] text-left">
                   <div className="relative aspect-[16/9] w-full overflow-hidden">
                     <img
                       src={item.coverImage}
@@ -216,7 +195,7 @@ export const FeaturedProjects: React.FC = () => {
                       </span>
                     </div>
 
-                    <h4 className="font-serif text-xl sm:text-2xl font-bold text-white group-hover:text-sky-200 transition-colors leading-snug">
+                    <h4 className="font-serif text-xl sm:text-2xl font-bold text-white transition-colors leading-snug">
                       {item.title}
                     </h4>
 
@@ -225,12 +204,12 @@ export const FeaturedProjects: React.FC = () => {
                         <MapPin className="w-3.5 h-3.5 text-[#38BDF8]" />
                         {item.location} • {item.area}
                       </span>
-                      <span className="text-[#38BDF8] font-bold flex items-center gap-1 group-hover:translate-x-0.5 transition-transform">
-                        Case Study <ArrowUpRight className="w-4 h-4" />
+                      <span className="text-[#38BDF8] font-bold">
+                        {item.budgetRange}
                       </span>
                     </div>
                   </div>
-                </Link>
+                </div>
               </div>
             ))}
           </motion.div>

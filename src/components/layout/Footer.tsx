@@ -9,7 +9,7 @@ export const Footer: React.FC = () => {
   const { openConsultationModal } = useAppStore();
 
   return (
-    <footer className="bg-[#0B2545] border-t border-[#133E70] text-slate-300 font-sans relative overflow-hidden">
+    <footer id="contact" className="bg-[#00224D] border-t border-[#0072CE]/30 text-slate-300 font-sans relative overflow-hidden">
       {/* Background Architectural Grid Pattern */}
       <div className="absolute inset-0 bg-architectural-grid opacity-15 pointer-events-none" />
 
@@ -57,11 +57,20 @@ export const Footer: React.FC = () => {
               >
                 Schedule Private Consultation
               </Button>
-              <Link to="/#projects">
-                <Button variant="secondary" size="md" icon="arrow-up-right">
-                  View Selected Works
-                </Button>
-              </Link>
+              <Button 
+                variant="secondary" 
+                size="md" 
+                icon="arrow-up-right"
+                onClick={() => {
+                  const elem = document.getElementById('projects');
+                  if (elem) {
+                    elem.scrollIntoView({ behavior: 'smooth' });
+                    window.history.replaceState(null, '', '#projects');
+                  }
+                }}
+              >
+                View Selected Works
+              </Button>
             </div>
           </div>
         </div>
@@ -93,10 +102,19 @@ export const Footer: React.FC = () => {
             </h4>
             <ul className="space-y-2.5 text-xs sm:text-sm font-normal">
               <li>
-                <Link to="/" className="hover:text-white transition-colors">Home</Link>
+                <a href="#home" className="hover:text-white transition-colors">Home</a>
               </li>
               <li>
-                <Link to="/contact" className="hover:text-white transition-colors">Contact Us</Link>
+                <a href="#about" className="hover:text-white transition-colors">About</a>
+              </li>
+              <li>
+                <a href="#services" className="hover:text-white transition-colors">Services</a>
+              </li>
+              <li>
+                <a href="#projects" className="hover:text-white transition-colors">Projects</a>
+              </li>
+              <li>
+                <a href="#contact" className="hover:text-white transition-colors">Contact Us</a>
               </li>
             </ul>
           </div>
@@ -108,22 +126,52 @@ export const Footer: React.FC = () => {
             </h4>
             <ul className="space-y-2 text-xs sm:text-sm font-light">
               <li>
-                <Link to="/services/residential-construction" className="hover:text-white transition-colors">Residential Villas</Link>
+                <button 
+                  onClick={() => openConsultationModal('Residential Villas')} 
+                  className="hover:text-white transition-colors text-left cursor-pointer"
+                >
+                  Residential Villas
+                </button>
               </li>
               <li>
-                <Link to="/services/commercial-construction" className="hover:text-white transition-colors">Commercial Studios</Link>
+                <button 
+                  onClick={() => openConsultationModal('Commercial Studios')} 
+                  className="hover:text-white transition-colors text-left cursor-pointer"
+                >
+                  Commercial Studios
+                </button>
               </li>
               <li>
-                <Link to="/services/architecture-and-structural-design" className="hover:text-white transition-colors">Architecture & 3D BIM</Link>
+                <button 
+                  onClick={() => openConsultationModal('Architecture & 3D BIM')} 
+                  className="hover:text-white transition-colors text-left cursor-pointer"
+                >
+                  Architecture & 3D BIM
+                </button>
               </li>
               <li>
-                <Link to="/services/interior-architecture-and-design" className="hover:text-white transition-colors">Bespoke Interiors</Link>
+                <button 
+                  onClick={() => openConsultationModal('Bespoke Interiors')} 
+                  className="hover:text-white transition-colors text-left cursor-pointer"
+                >
+                  Bespoke Interiors
+                </button>
               </li>
               <li>
-                <Link to="/services/renovation-and-restoration" className="hover:text-white transition-colors">Historic Restorations</Link>
+                <button 
+                  onClick={() => openConsultationModal('Historic Restorations')} 
+                  className="hover:text-white transition-colors text-left cursor-pointer"
+                >
+                  Historic Restorations
+                </button>
               </li>
               <li>
-                <Link to="/services/turnkey-project-management" className="hover:text-white transition-colors">Turnkey Execution</Link>
+                <button 
+                  onClick={() => openConsultationModal('Turnkey Execution')} 
+                  className="hover:text-white transition-colors text-left cursor-pointer"
+                >
+                  Turnkey Execution
+                </button>
               </li>
             </ul>
           </div>
@@ -178,8 +226,8 @@ export const Footer: React.FC = () => {
           </p>
 
           <div className="flex items-center gap-6">
-            <Link to="/privacy" className="hover:text-slate-200 transition-colors">Privacy Policy</Link>
-            <Link to="/terms" className="hover:text-slate-200 transition-colors">Terms of Engagement</Link>
+            <span className="text-slate-400">Privacy Policy</span>
+            <span className="text-slate-400">Terms of Engagement</span>
             <span className="text-[#38BDF8]">Architecture • Engineering</span>
           </div>
         </div>
