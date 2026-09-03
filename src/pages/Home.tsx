@@ -6,6 +6,7 @@ import { FeaturedProjects } from '../components/home/FeaturedProjects';
 import { WhyChooseUs } from '../components/home/WhyChooseUs';
 import { TestimonialsSection } from '../components/home/TestimonialsSection';
 import { StatsStrip } from '../components/home/StatsStrip';
+import { HomeContactSection } from '../components/home/HomeContactSection';
 
 export const Home: React.FC = () => {
   return (
@@ -43,7 +44,8 @@ export const Home: React.FC = () => {
         <TestimonialsSection />
       </div>
 
-
+      {/* 8. Contact Form & Studio Locations Section */}
+      <HomeContactSection />
     </div>
   );
 };

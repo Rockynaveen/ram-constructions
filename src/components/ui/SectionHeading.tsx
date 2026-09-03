@@ -57,13 +57,13 @@ export const SectionHeading: React.FC<SectionHeadingProps> = ({
         viewport={{ once: true }}
         transition={{ duration: 0.55, delay: 0.08 }}
         className={cn(
-          "font-editorial-serif text-3xl sm:text-4xl md:text-5xl lg:text-[3.25rem] font-medium leading-[1.12] tracking-tight",
+          "font-sans text-3xl sm:text-4xl md:text-5xl lg:text-[3.25rem] font-bold leading-[1.14] tracking-tight",
           titleColor
         )}
       >
         {title}{' '}
         {titleHighlight && (
-          <span className="font-editorial-serif italic font-bold bg-gradient-to-r from-[#001738] via-[#0072CE] to-[#38BDF8] bg-clip-text text-transparent">
+          <span className="font-sans font-bold bg-gradient-to-r from-[#001738] via-[#0072CE] to-[#38BDF8] bg-clip-text text-transparent">
             {titleHighlight}
           </span>
         )}

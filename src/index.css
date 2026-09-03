@@ -1,10 +1,10 @@
 @import "tailwindcss";
 
 @theme {
-  --font-sans: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  --font-serif: "Playfair Display", Georgia, serif;
-  --font-display: "Cinzel", "Playfair Display", serif;
-  --font-body: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-sans: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+  --font-serif: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+  --font-display: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+  --font-body: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
   --font-mono: "Roboto Mono", monospace;
 
   /* RAM Construction Official Theme: Deep Obsidian Navy (#001738, #00224D, #002D62), Royal Cerulean (#0072CE, #0284C7), Sky Cyan (#38BDF8) */
@@ -46,7 +46,7 @@
 
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-sans);
-    letter-spacing: -0.025em;
+    letter-spacing: -0.015em;
   }
 
   p {
@@ -69,15 +69,13 @@
   }
 }
 
-/* Custom luxury architectural typography utilities */
-.font-editorial-serif {
-  font-family: var(--font-serif);
-  letter-spacing: -0.015em;
-}
-
-.font-roman-display {
-  font-family: var(--font-display);
-  letter-spacing: 0.1em;
+/* Typography utilities mapped to normal font */
+.font-editorial-serif,
+.font-roman-display,
+.font-serif,
+.font-sans,
+.font-display {
+  font-family: var(--font-sans) !important;
 }
 
 /* Architectural Grid Textures */

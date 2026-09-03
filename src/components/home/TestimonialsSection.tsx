@@ -107,7 +107,7 @@ export const TestimonialsSection: React.FC = () => {
                   <span className="text-xs font-mono text-sky-200 ml-2 font-bold tracking-wide">5.0 / 5.0 VERIFIED CLIENT</span>
                 </div>
 
-                <blockquote className="font-editorial-serif text-lg sm:text-xl lg:text-2xl text-white leading-relaxed italic font-normal drop-shadow-sm">
+                <blockquote className="font-sans text-lg sm:text-xl lg:text-2xl text-white leading-relaxed font-normal drop-shadow-sm">
                   "{current.quote}"
                 </blockquote>
 

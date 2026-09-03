@@ -320,7 +320,7 @@ export const ConsultationModal: React.FC = () => {
 
               {/* Bottom Feature Cards Overlaid */}
               <div className="space-y-3 bg-[#001738]/85 backdrop-blur-md p-4 rounded-xl border border-white/15 shadow-xl">
-                <p className="text-xs font-serif italic text-slate-200 leading-relaxed">
+                <p className="text-xs font-sans text-slate-200 leading-relaxed">
                   "Every millimeter matters when engineering a landmark residence or commercial space."
                 </p>
 

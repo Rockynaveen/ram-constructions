@@ -17,25 +17,16 @@ export const Hero: React.FC = () => {
           className="w-full h-full"
         >
           <img
-            src="/images/hero-aura-tower.jpg"
-            alt="RAM Construction Landmark Tower Infrastructure"
+            src="/images/hero final.png"
+            alt="RAM Construction Architecture & Civil Engineering"
             className="w-full h-full object-cover object-center filter brightness-[1.02] contrast-[1.06]"
           />
         </motion.div>
 
-        {/* Cinematic Multi-Layered Overlays */}
-        <div className="absolute inset-0 bg-[#010B18]/45 pointer-events-none" />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#010B18]/95 via-[#010B18]/70 to-transparent w-full lg:w-[78%] pointer-events-none" />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#010B18] via-transparent to-[#010B18]/60 pointer-events-none" />
-
-        {/* Ambient Subtle Architectural Grid */}
-        <div 
-          className="absolute inset-0 opacity-12 pointer-events-none" 
-          style={{
-            backgroundImage: `linear-gradient(to right, rgba(56, 189, 248, 0.18) 1px, transparent 1px), linear-gradient(to bottom, rgba(56, 189, 248, 0.18) 1px, transparent 1px)`,
-            backgroundSize: '52px 52px'
-          }}
-        />
+        {/* Reduced & Balanced Overlays */}
+        <div className="absolute inset-0 bg-[#010B18]/20 pointer-events-none" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#010B18]/70 via-[#010B18]/40 to-transparent w-full lg:w-[60%] pointer-events-none" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#010B18]/50 via-transparent to-[#010B18]/20 pointer-events-none" />
       </div>
 
       {/* 2. Main Hero Content Container */}
@@ -59,12 +50,12 @@ export const Hero: React.FC = () => {
               </div>
             </div>
 
-            {/* Main Headline with Editorial Serif & Modern Gradient */}
+            {/* Main Headline with Normal Sans Font */}
             <div>
-              <h1 className="font-editorial-serif text-3xl sm:text-4xl md:text-5xl lg:text-[3.25rem] xl:text-[3.6rem] font-medium text-white leading-[1.14] tracking-tight drop-shadow-xl">
+              <h1 className="font-sans text-3xl sm:text-4xl md:text-5xl lg:text-[3.25rem] xl:text-[3.6rem] font-bold text-white leading-[1.14] tracking-tight drop-shadow-xl">
                 Building More Than <br />
                 Structures — <br />
-                <span className="italic font-bold bg-gradient-to-r from-white via-[#93C5FD] to-[#38BDF8] bg-clip-text text-transparent">
+                <span className="font-bold bg-gradient-to-r from-white via-[#93C5FD] to-[#38BDF8] bg-clip-text text-transparent">
                   Engineering Legacies.
                 </span>
               </h1>

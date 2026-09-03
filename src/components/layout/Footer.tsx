@@ -9,7 +9,7 @@ export const Footer: React.FC = () => {
   const { openConsultationModal } = useAppStore();
 
   return (
-    <footer id="contact" className="bg-[#001738] border-t border-[#0072CE]/30 text-slate-300 font-sans relative overflow-hidden">
+    <footer className="bg-[#001738] border-t border-[#0072CE]/30 text-slate-300 font-sans relative overflow-hidden">
       {/* Background Architectural Grid Pattern */}
       <div className="absolute inset-0 bg-architectural-grid opacity-15 pointer-events-none" />
 

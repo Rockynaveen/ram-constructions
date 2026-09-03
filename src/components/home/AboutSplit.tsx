@@ -36,7 +36,7 @@ export const AboutSplit: React.FC = () => {
                     Executive Atelier Philosophy
                   </span>
                 </div>
-                <p className="text-xl sm:text-2xl text-white font-editorial-serif italic font-medium leading-snug drop-shadow-md">
+                <p className="text-xl sm:text-2xl text-white font-sans font-medium leading-snug drop-shadow-md">
                   "Every millimeter matters when engineering a landmark home."
                 </p>
               </div>
