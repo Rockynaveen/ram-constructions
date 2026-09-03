@@ -9,12 +9,12 @@ export const Footer: React.FC = () => {
   const { openConsultationModal } = useAppStore();
 
   return (
-    <footer id="contact" className="bg-[#00224D] border-t border-[#0072CE]/30 text-slate-300 font-sans relative overflow-hidden">
+    <footer id="contact" className="bg-[#001738] border-t border-[#0072CE]/30 text-slate-300 font-sans relative overflow-hidden">
       {/* Background Architectural Grid Pattern */}
       <div className="absolute inset-0 bg-architectural-grid opacity-15 pointer-events-none" />
 
       {/* Top CTA Banner */}
-      <div className="relative border-b border-white/10 py-12 sm:py-16 overflow-hidden">
+      <div className="relative border-b border-white/10 py-8 overflow-hidden">
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
           <img
@@ -32,9 +32,9 @@ export const Footer: React.FC = () => {
         </div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6">
+          <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-8">
             <div className="max-w-2xl">
-              <div className="flex items-center gap-3 mb-2">
+              <div className="flex items-center gap-3 mb-2.5">
                 <span className="w-6 h-[2px] bg-[#38BDF8]" />
                 <span className="text-xs tracking-[0.25em] text-[#38BDF8] uppercase font-bold">
                   Start Your Build
@@ -43,7 +43,7 @@ export const Footer: React.FC = () => {
               <h2 className="text-3xl sm:text-4xl lg:text-5xl text-white font-bold leading-tight drop-shadow-md">
                 Have a residence or landmark in mind? <span className="text-[#38BDF8]">Let’s talk.</span>
               </h2>
-              <p className="mt-3 text-sm sm:text-base font-normal text-slate-200 max-w-xl leading-relaxed drop-shadow-sm">
+              <p className="mt-3.5 text-sm sm:text-base font-normal text-slate-200 max-w-xl leading-relaxed drop-shadow-sm">
                 We accept a limited number of premium residential and commercial commissions each year to ensure rigorous executive oversight on every square foot.
               </p>
             </div>
@@ -77,7 +77,7 @@ export const Footer: React.FC = () => {
       </div>
 
       {/* Main Footer Links & Information */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           {/* Col 1 & 2: Brand Identity */}
           <div className="lg:col-span-2 space-y-4">
@@ -89,7 +89,7 @@ export const Footer: React.FC = () => {
               RAM Constructions is an engineering-driven architecture and modern turnkey home construction firm. We merge visionary structural engineering with in-house master construction craftsmanship.
             </p>
 
-            <div className="pt-1 text-xs font-mono text-[#38BDF8] flex items-center gap-2">
+            <div className="pt-1 text-xs font-sans text-[#38BDF8] flex items-center gap-2">
               <ShieldCheck className="w-4 h-4 text-[#38BDF8]" />
               <span>COA Registered & ISO 9001:2015 Certified Practice</span>
             </div>
@@ -97,7 +97,7 @@ export const Footer: React.FC = () => {
 
           {/* Col 3: Navigation */}
           <div>
-            <h4 className="text-xs uppercase tracking-[0.2em] text-[#38BDF8] font-bold mb-3">
+            <h4 className="text-xs uppercase tracking-[0.2em] text-[#38BDF8] font-bold mb-3.5">
               Navigation
             </h4>
             <ul className="space-y-2.5 text-xs sm:text-sm font-normal">
@@ -121,7 +121,7 @@ export const Footer: React.FC = () => {
 
           {/* Col 4: Services */}
           <div>
-            <h4 className="text-xs font-mono uppercase tracking-[0.2em] text-[#38BDF8] font-bold mb-3">
+            <h4 className="text-xs font-sans uppercase tracking-[0.2em] text-[#38BDF8] font-bold mb-3.5">
               Disciplines
             </h4>
             <ul className="space-y-2 text-xs sm:text-sm font-light">
@@ -178,25 +178,25 @@ export const Footer: React.FC = () => {
 
           {/* Col 5: Studio Offices */}
           <div>
-            <h4 className="text-xs font-mono uppercase tracking-[0.2em] text-[#38BDF8] font-bold mb-3">
+            <h4 className="text-xs font-sans uppercase tracking-[0.2em] text-[#38BDF8] font-bold mb-3.5">
               Offices & Studio
             </h4>
-            <div className="space-y-3 text-xs font-light text-slate-300">
+            <div className="space-y-3.5 text-xs font-light text-slate-300">
               <div>
-                <strong className="text-white block font-mono text-[11px] uppercase mb-0.5">Hyderabad Head Office</strong>
+                <strong className="text-white block font-sans text-[11px] uppercase mb-0.5 font-bold">Hyderabad Head Office</strong>
                 <p>Road No. 36, Jubilee Hills, Hyderabad 500033</p>
-                <p className="font-mono text-slate-200 mt-0.5">+91 40 6899 4400</p>
+                <p className="font-sans text-slate-200 mt-0.5">+91 40 6899 4400</p>
               </div>
 
               <div>
-                <strong className="text-white block font-mono text-[11px] uppercase mb-0.5">Bengaluru Office</strong>
+                <strong className="text-white block font-sans text-[11px] uppercase mb-0.5 font-bold">Bengaluru Office</strong>
                 <p>Lavelle Road, Shanthala Nagar, Bengaluru 560001</p>
-                <p className="font-mono text-slate-200 mt-0.5">+91 80 4912 8800</p>
+                <p className="font-sans text-slate-200 mt-0.5">+91 80 4912 8800</p>
               </div>
 
               <div>
-                <strong className="text-white block font-mono text-[11px] uppercase mb-0.5">Client Inquiries</strong>
-                <a href="mailto:info@ramconstructions.in" className="text-[#38BDF8] hover:underline font-mono">
+                <strong className="text-white block font-sans text-[11px] uppercase mb-0.5 font-bold">Client Inquiries</strong>
+                <a href="mailto:info@ramconstructions.in" className="text-[#38BDF8] hover:underline font-sans">
                   info@ramconstructions.in
                 </a>
               </div>
@@ -205,7 +205,7 @@ export const Footer: React.FC = () => {
         </div>
 
         {/* Bottom Legal Strip with Center Designed by Sunseaz */}
-        <div className="mt-10 pt-6 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-4 text-xs font-light text-slate-400 font-mono text-center md:text-left">
+        <div className="mt-12 pt-6 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-4 text-xs font-light text-slate-400 font-sans text-center md:text-left">
           <p>© {new Date().getFullYear()} RAM CONSTRUCTIONS Pvt. Ltd. All rights reserved.</p>
 
           <p className="text-slate-300">

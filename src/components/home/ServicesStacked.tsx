@@ -12,21 +12,22 @@ import {
 
 export const ServicesStacked: React.FC = () => {
   return (
-    <section className="py-10 bg-[#F8FAFC] relative border-t border-slate-200">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="py-8 bg-[#F8FAFC] relative border-t border-slate-200/80 overflow-hidden">
+      {/* Background Architectural Grid Pattern */}
+      <div className="absolute inset-0 bg-architectural-grid opacity-30 pointer-events-none" />
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
-        {/* Shadcn UI Interactive 3D Card Carousel Wrapper */}
+        {/* Interactive 3D Card Carousel Wrapper */}
         <Carousel className="w-full">
           {/* Header */}
-          <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10">
+          <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-8">
             <SectionHeading
-              eyebrow="Our Services"
-              title="Core"
-              titleHighlight="Disciplines."
-              description="Comprehensive architecture, engineering, and turnkey construction services delivered with single-point accountability."
+              eyebrow="Turnkey Disciplines"
+              title="Core Engineering &"
+              titleHighlight="Execution."
+              description="Comprehensive architecture, structural civil engineering, and turnkey construction services delivered with single-point accountability."
             />
-
-            {/* No external navigation link - all services accessible in interactive carousel */}
           </div>
 
           {/* Carousel Deck Container with Side Navigation Indicators */}

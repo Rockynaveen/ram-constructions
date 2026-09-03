@@ -264,7 +264,7 @@ export const ConsultationModal: React.FC = () => {
                     <button
                       type="submit"
                       disabled={isSubmitting}
-                      className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-gradient-to-r from-[#002D62] to-[#0072CE] hover:brightness-110 text-white text-xs font-mono font-bold tracking-wider uppercase px-6 py-3 rounded-lg transition-all shadow-md shadow-[#002D62]/25 cursor-pointer disabled:opacity-60"
+                      className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-gradient-to-r from-[#001738] via-[#00224D] to-[#0072CE] hover:brightness-110 text-white text-[11px] font-sans font-bold tracking-[0.14em] uppercase px-5 py-2.5 rounded-lg transition-all duration-300 shadow-sm shadow-[#001738]/25 hover:shadow-md hover:shadow-[#0072CE]/30 hover:-translate-y-0.5 cursor-pointer disabled:opacity-60"
                     >
                       {isSubmitting ? (
                         <>

@@ -19,21 +19,21 @@ export const Button: React.FC<ButtonProps> = ({
   disabled,
   ...props
 }) => {
-  const baseStyles = "inline-flex items-center justify-center font-sans tracking-wide transition-all duration-300 font-semibold cursor-pointer relative group overflow-hidden disabled:opacity-50 disabled:cursor-not-allowed rounded-sm";
+  const baseStyles = "inline-flex items-center justify-center font-sans tracking-[0.14em] uppercase font-bold transition-all duration-300 cursor-pointer relative group overflow-hidden disabled:opacity-50 disabled:cursor-not-allowed rounded-lg active:scale-[0.99]";
 
   const sizeStyles = {
-    sm: "text-xs px-4 py-2.5 gap-2",
-    md: "text-sm px-6 py-3.5 gap-2.5",
-    lg: "text-base px-8 py-4 gap-3",
+    sm: "text-[11px] px-4 py-2 gap-2",
+    md: "text-[12px] px-5 py-2.5 gap-2.5",
+    lg: "text-[13px] px-7 py-3.5 gap-3",
   };
 
   const variantStyles = {
-    primary: "bg-gradient-to-r from-[#002D62] to-[#0072CE] hover:from-[#00224D] hover:to-[#0284C7] text-white active:scale-[0.99] shadow-md shadow-[#002D62]/25 font-bold border border-[#38BDF8]/40 hover:shadow-lg hover:shadow-sky-500/30",
-    secondary: "bg-[#00224D] text-[#F0F9FF] hover:bg-[#002D62] border border-[#0072CE]/30 hover:border-[#38BDF8]/60 active:scale-[0.99]",
-    outline: "bg-transparent text-[#0072CE] border border-[#0072CE]/50 hover:border-[#002D62] hover:text-white hover:bg-gradient-to-r hover:from-[#002D62] hover:to-[#0072CE] active:scale-[0.99]",
-    ghost: "bg-transparent text-slate-700 hover:text-[#0072CE] p-0 hover:bg-transparent tracking-widest uppercase text-xs",
-    bronze: "bg-[#021226] text-[#38BDF8] border border-[#0072CE]/30 hover:border-[#38BDF8] hover:bg-[#0072CE]/10",
-    navy: "bg-[#002D62] text-white hover:bg-[#00224D] border border-[#0072CE]/30 shadow-md"
+    primary: "bg-gradient-to-r from-[#001738] via-[#00224D] to-[#0072CE] hover:brightness-110 text-white shadow-sm shadow-[#001738]/25 hover:shadow-md hover:shadow-[#0072CE]/30 hover:-translate-y-0.5 border border-transparent",
+    secondary: "bg-white/10 hover:bg-white/18 backdrop-blur-md text-white border border-white/30 hover:border-white/60 shadow-sm hover:-translate-y-0.5",
+    outline: "bg-white hover:bg-slate-50 text-[#001738] border border-slate-300 hover:border-[#0072CE] shadow-xs hover:-translate-y-0.5",
+    ghost: "bg-transparent text-slate-700 hover:text-[#0072CE] p-0 tracking-[0.14em] uppercase text-[11px]",
+    bronze: "bg-[#010B18] text-[#38BDF8] border border-[#0072CE]/30 hover:border-[#38BDF8] hover:bg-[#0072CE]/10",
+    navy: "bg-[#00224D] text-white hover:bg-[#001738] border border-[#0072CE]/30 shadow-sm"
   };
 
   return (
@@ -45,10 +45,10 @@ export const Button: React.FC<ButtonProps> = ({
       <span className="relative z-10 flex items-center gap-2">
         {children}
         {icon === 'arrow-right' && (
-          <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
+          <ArrowRight className="w-3.5 h-3.5 transition-transform duration-300 group-hover:translate-x-1" />
         )}
         {icon === 'arrow-up-right' && (
-          <ArrowUpRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+          <ArrowUpRight className="w-3.5 h-3.5 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
         )}
       </span>
     </button>

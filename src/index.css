@@ -1,16 +1,17 @@
 @import "tailwindcss";
 
 @theme {
-  --font-serif: "Roboto", sans-serif;
-  --font-display: "Roboto", sans-serif;
-  --font-sans: "Roboto", sans-serif;
-  --font-mono: "Roboto", sans-serif;
+  --font-sans: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-serif: "Playfair Display", Georgia, serif;
+  --font-display: "Cinzel", "Playfair Display", serif;
+  --font-body: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-mono: "Roboto Mono", monospace;
 
-  /* RAM Construction Official Logo Theme: Deep Navy (#002D62), Electric Cerulean (#0072CE / #0284C7), Sky Cyan (#38BDF8) */
-  --color-brand-navy-950: #021226;
-  --color-brand-navy-900: #00224D;
-  --color-brand-navy-800: #002D62;
-  --color-brand-navy-700: #0B3C78;
+  /* RAM Construction Official Theme: Deep Obsidian Navy (#001738, #00224D, #002D62), Royal Cerulean (#0072CE, #0284C7), Sky Cyan (#38BDF8) */
+  --color-brand-navy-950: #010B18;
+  --color-brand-navy-900: #001738;
+  --color-brand-navy-800: #00224D;
+  --color-brand-navy-700: #002D62;
 
   --color-brand-blue-600: #0072CE;
   --color-brand-blue-500: #0284C7;
@@ -25,7 +26,6 @@
 @layer base {
   *, ::after, ::before {
     box-sizing: border-box;
-    font-family: "Roboto", sans-serif !important;
   }
 
   html {
@@ -33,28 +33,27 @@
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    background-color: #FFFFFF;
-    font-family: "Roboto", sans-serif !important;
+    background-color: #FCFDFE;
+    font-family: var(--font-sans);
   }
 
   body {
-    background-color: #FFFFFF;
-    color: #334155;
-    font-family: "Roboto", sans-serif !important;
+    background-color: #FCFDFE;
+    color: #1E293B;
+    font-family: var(--font-sans);
     overflow-x: hidden;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    font-family: "Roboto", sans-serif !important;
-    letter-spacing: -0.02em;
-    font-weight: 700;
+    font-family: var(--font-sans);
+    letter-spacing: -0.025em;
   }
 
-  p, span, a, button, input, textarea, select, label {
-    font-family: "Roboto", sans-serif !important;
+  p {
+    font-family: var(--font-body);
   }
 
-  /* Custom subtle scrollbar in RAM Blue */
+  /* Custom luxury scrollbar in RAM Blue */
   ::-webkit-scrollbar {
     width: 6px;
   }
@@ -66,68 +65,85 @@
     border-radius: 3px;
   }
   ::-webkit-scrollbar-thumb:hover {
-    background: #0284C7;
+    background: #0072CE;
   }
 }
 
-/* Custom architectural utilities */
-.font-display-serif,
-.font-editorial,
-.font-tech,
-.font-serif,
-.font-sans,
-.font-mono {
-  font-family: "Roboto", sans-serif !important;
+/* Custom luxury architectural typography utilities */
+.font-editorial-serif {
+  font-family: var(--font-serif);
+  letter-spacing: -0.015em;
 }
 
+.font-roman-display {
+  font-family: var(--font-display);
+  letter-spacing: 0.1em;
+}
+
+/* Architectural Grid Textures */
 .bg-architectural-grid {
-  background-size: 40px 40px;
+  background-size: 52px 52px;
   background-image: 
-    linear-gradient(to right, rgba(2, 132, 199, 0.05) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(2, 132, 199, 0.05) 1px, transparent 1px);
+    linear-gradient(to right, rgba(0, 114, 206, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 114, 206, 0.04) 1px, transparent 1px);
 }
 
 .bg-light-grid {
-  background-size: 40px 40px;
+  background-size: 44px 44px;
   background-image: 
-    linear-gradient(to right, rgba(11, 37, 69, 0.04) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(11, 37, 69, 0.04) 1px, transparent 1px);
+    linear-gradient(to right, rgba(0, 34, 77, 0.035) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 34, 77, 0.035) 1px, transparent 1px);
 }
 
-.text-gold-gradient,
 .text-brand-gradient {
-  background: linear-gradient(135deg, #002D62 0%, #0072CE 55%, #38BDF8 100%);
+  background: linear-gradient(135deg, #001738 0%, #002D62 40%, #0072CE 75%, #38BDF8 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .text-blue-gradient {
-  background: linear-gradient(135deg, #0072CE 0%, #38BDF8 100%);
+  background: linear-gradient(135deg, #0072CE 0%, #0284C7 50%, #38BDF8 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .bg-brand-gradient {
-  background: linear-gradient(135deg, #002D62 0%, #0072CE 100%);
+  background: linear-gradient(135deg, #001738 0%, #00224D 45%, #0072CE 100%);
 }
 
 .bg-brand-gradient-hover:hover {
-  background: linear-gradient(135deg, #00224D 0%, #0284C7 100%);
+  background: linear-gradient(135deg, #000E24 0%, #001738 45%, #0284C7 100%);
 }
 
-.bg-brand-gradient-light {
-  background: linear-gradient(135deg, rgba(0, 45, 98, 0.05) 0%, rgba(0, 114, 206, 0.1) 100%);
+/* Ultra-Luxury Glassmorphism */
+.luxury-glass {
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(226, 232, 240, 0.85);
+  box-shadow: 0 15px 35px -10px rgba(0, 34, 77, 0.05), 0 0 1px rgba(0, 34, 77, 0.08);
 }
 
-.glass-panel {
-  background: rgba(255, 255, 255, 0.85);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(226, 232, 240, 0.9);
+.luxury-glass-dark {
+  background: rgba(1, 11, 24, 0.82);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.55);
 }
 
-.editorial-shadow {
-  box-shadow: 0 20px 40px -15px rgba(11, 37, 69, 0.08), 0 0 1px rgba(11, 37, 69, 0.1);
+/* Luxury Card Elevation */
+.luxury-card-glow {
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.luxury-card-glow:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 25px 50px -12px rgba(0, 34, 77, 0.15), 0 0 1px rgba(0, 114, 206, 0.4);
+}
+
+.architectural-shadow {
+  box-shadow: 0 20px 45px -15px rgba(0, 23, 56, 0.07), 0 2px 6px rgba(0, 23, 56, 0.04);
 }
 
 /* 3D Card Flip Utilities */
@@ -153,5 +169,7 @@
   .preserve-3d {
     transform-style: flat !important;
   }
+  .luxury-card-glow:hover {
+    transform: none;
+  }
 }
-
