@@ -149,7 +149,7 @@ export const ServiceCard: React.FC<ServiceCardProps> = ({ service }) => {
                 e.stopPropagation();
                 openConsultationModal(`Inquiry: ${service.title}`);
               }}
-              className="inline-flex items-center justify-between w-full px-5 py-2.5 rounded-lg bg-gradient-to-r from-[#001738] via-[#00224D] to-[#0072CE] hover:brightness-110 active:scale-[0.99] text-white text-[11px] font-sans font-bold tracking-[0.14em] uppercase transition-all duration-300 shadow-sm shadow-[#001738]/25 hover:shadow-md hover:shadow-[#0072CE]/30 hover:-translate-y-0.5 group/btn cursor-pointer"
+              className="inline-flex items-center justify-between w-full px-5 py-2.5 rounded-lg bg-gradient-to-r from-[#0072CE] via-[#0284C7] to-[#0072CE] hover:from-[#005fb0] hover:to-[#0284C7] active:scale-[0.99] text-white text-[11px] font-sans font-bold tracking-[0.14em] uppercase transition-all duration-300 border border-[#38BDF8]/50 shadow-md shadow-[#0072CE]/30 hover:shadow-lg hover:shadow-[#0072CE]/45 hover:-translate-y-0.5 group/btn cursor-pointer"
             >
               <span>Inquire Now</span>
               <ArrowUpRight className="w-3.5 h-3.5 transition-transform duration-300 group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5" />
