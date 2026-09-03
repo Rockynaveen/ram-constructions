@@ -49,12 +49,14 @@ export const Hero: React.FC = () => {
             transition={{ duration: 0.85, ease: [0.16, 1, 0.3, 1] }}
             className="space-y-5 sm:space-y-6"
           >
-            {/* Prestige Eyebrow Badge */}
-            <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-xl border border-white/20 shadow-xl shadow-black/25">
-              <span className="w-2 h-2 rounded-full bg-[#38BDF8] animate-pulse" />
-              <span className="text-[11px] sm:text-xs font-sans font-bold tracking-[0.22em] text-[#38BDF8] uppercase">
-                PREMIER CIVIL & ARCHITECTURAL ENGINEERING
-              </span>
+            {/* Prestige Eyebrow Badge with 50px top padding */}
+            <div className="pt-[50px]">
+              <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-xl border border-white/20 shadow-xl shadow-black/25">
+                <span className="w-2 h-2 rounded-full bg-[#38BDF8] animate-pulse" />
+                <span className="text-[11px] sm:text-xs font-sans font-bold tracking-[0.22em] text-[#38BDF8] uppercase">
+                  PREMIER CIVIL & ARCHITECTURAL ENGINEERING
+                </span>
+              </div>
             </div>
 
             {/* Main Headline with Editorial Serif & Modern Gradient */}

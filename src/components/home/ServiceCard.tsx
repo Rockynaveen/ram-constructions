@@ -97,9 +97,8 @@ export const ServiceCard: React.FC<ServiceCardProps> = ({ service }) => {
               {service.title}
             </h3>
 
-            {/* Tap / Hover hint */}
-            <div className="mt-3 pt-2.5 border-t border-white/15 flex items-center justify-between text-[11px] font-sans text-slate-300">
-              <span className="opacity-80">Tap to review specs</span>
+            {/* Specifications hint */}
+            <div className="mt-3 pt-2.5 border-t border-white/15 flex items-center justify-end text-[11px] font-sans">
               <span className="text-[#38BDF8] font-bold flex items-center gap-1 group-hover:translate-x-0.5 transition-transform">
                 Specifications <ArrowUpRight className="w-3.5 h-3.5" />
               </span>
@@ -152,7 +151,7 @@ export const ServiceCard: React.FC<ServiceCardProps> = ({ service }) => {
               }}
               className="inline-flex items-center justify-between w-full px-5 py-2.5 rounded-lg bg-gradient-to-r from-[#001738] via-[#00224D] to-[#0072CE] hover:brightness-110 active:scale-[0.99] text-white text-[11px] font-sans font-bold tracking-[0.14em] uppercase transition-all duration-300 shadow-sm shadow-[#001738]/25 hover:shadow-md hover:shadow-[#0072CE]/30 hover:-translate-y-0.5 group/btn cursor-pointer"
             >
-              <span>Inquire Discipline</span>
+              <span>Inquire Now</span>
               <ArrowUpRight className="w-3.5 h-3.5 transition-transform duration-300 group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5" />
             </button>
           </div>

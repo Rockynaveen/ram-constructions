@@ -41,6 +41,14 @@ export const Navbar: React.FC = () => {
     }
   };
 
+  const handleLogoClick = (e: React.MouseEvent) => {
+    if (location.pathname === '/') {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      window.history.replaceState(null, '', '/#home');
+    }
+  };
+
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 h-18 h-[72px] flex items-center ${isScrolled
@@ -50,7 +58,12 @@ export const Navbar: React.FC = () => {
     >
       <div className="w-full max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-10 flex items-center justify-between h-full">
         {/* Brand Logo with zero extra padding */}
-        <Link to="/" className="flex items-center group p-0 m-0 transition-transform hover:scale-[1.01]">
+        <Link 
+          to="/" 
+          onClick={handleLogoClick}
+          className="flex items-center group p-0 m-0 transition-transform hover:scale-[1.01] cursor-pointer"
+          aria-label="RAM Constructions Home"
+        >
           <Logo size="md" theme="light" />
         </Link>
 

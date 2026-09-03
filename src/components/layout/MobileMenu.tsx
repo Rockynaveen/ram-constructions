@@ -43,7 +43,18 @@ export const MobileMenu: React.FC = () => {
         >
           {/* Top Bar */}
           <div className="flex items-center justify-between border-b border-slate-200 pb-5">
-            <Logo size="md" theme="light" />
+            <Link
+              to="/"
+              onClick={() => {
+                closeMobileMenu();
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+                window.history.replaceState(null, '', '/#home');
+              }}
+              className="cursor-pointer"
+              aria-label="RAM Constructions Home"
+            >
+              <Logo size="md" theme="light" />
+            </Link>
             <button
               onClick={closeMobileMenu}
               className="p-2 text-slate-600 hover:text-[#0284C7] bg-slate-100 hover:bg-slate-200 border border-slate-200 rounded-sm cursor-pointer"

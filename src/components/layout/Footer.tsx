@@ -81,7 +81,18 @@ export const Footer: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           {/* Col 1 & 2: Brand Identity */}
           <div className="lg:col-span-2 space-y-4">
-            <Link to="/" className="inline-block group">
+            <Link 
+              to="/" 
+              onClick={(e) => {
+                if (window.location.pathname === '/') {
+                  e.preventDefault();
+                  window.scrollTo({ top: 0, behavior: 'smooth' });
+                  window.history.replaceState(null, '', '/#home');
+                }
+              }}
+              className="inline-block group cursor-pointer"
+              aria-label="RAM Constructions Home"
+            >
               <Logo size="lg" theme="dark" />
             </Link>
 
