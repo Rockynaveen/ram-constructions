@@ -7,7 +7,7 @@ export const Hero: React.FC = () => {
   const { openConsultationModal } = useAppStore();
 
   return (
-    <section className="relative min-h-[100dvh] lg:h-screen lg:min-h-[100vh] flex items-center pt-24 sm:pt-24 lg:pt-20 pb-12 lg:pb-0 overflow-hidden bg-[#010B18]">
+    <section className="relative min-h-[65vh] sm:min-h-[78vh] lg:h-screen lg:min-h-[100vh] flex items-center pt-20 sm:pt-24 lg:pt-20 pb-8 sm:pb-12 lg:pb-0 overflow-hidden bg-[#010B18]">
       {/* 1. Architectural Hero Image with Cinematic Lighting */}
       <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
         <motion.div
@@ -41,7 +41,7 @@ export const Hero: React.FC = () => {
             className="space-y-4 sm:space-y-6"
           >
             {/* Prestige Eyebrow Badge */}
-            <div className="pt-2 sm:pt-4 lg:pt-[50px]">
+            <div className="pt-0 sm:pt-2 lg:pt-[50px]">
               <div className="inline-flex items-center gap-2 sm:gap-2.5 px-3.5 sm:px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-xl border border-white/20 shadow-xl shadow-black/25">
                 <span className="w-2 h-2 rounded-full bg-[#38BDF8] animate-pulse shrink-0" />
                 <span className="text-[10px] sm:text-xs font-sans font-bold tracking-[0.16em] sm:tracking-[0.22em] text-[#38BDF8] uppercase">
