@@ -56,7 +56,7 @@ export const Navbar: React.FC = () => {
         : 'bg-white/75 backdrop-blur-md'
         }`}
     >
-      <div className="w-full max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-10 flex items-center justify-between h-full">
+      <div className="w-full max-w-[1440px] mx-auto px-6 sm:px-10 lg:px-14 flex items-center justify-between h-full">
         {/* Brand Logo with zero extra padding */}
         <Link 
           to="/" 

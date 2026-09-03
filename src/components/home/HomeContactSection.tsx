@@ -61,7 +61,7 @@ export const HomeContactSection: React.FC = () => {
       {/* Background Subtle Grid Pattern */}
       <div className="absolute inset-0 bg-light-grid opacity-30 pointer-events-none" />
 
-      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-10 relative z-10">
+      <div className="max-w-[1440px] mx-auto px-6 sm:px-10 lg:px-14 relative z-10">
         
         {/* Section Heading */}
         <div className="mb-8">

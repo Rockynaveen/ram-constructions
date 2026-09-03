@@ -30,7 +30,7 @@ export const Hero: React.FC = () => {
       </div>
 
       {/* 2. Main Hero Content Container */}
-      <div className="relative z-10 max-w-[1440px] mx-auto px-4 sm:px-8 lg:px-14 w-full">
+      <div className="relative z-10 max-w-[1440px] mx-auto px-6 sm:px-10 lg:px-14 w-full">
         <div className="max-w-3xl">
           
           {/* Editorial Headline & Actions */}
